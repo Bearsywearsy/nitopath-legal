@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NitoPath — Email confirmed</title>
+<style>
+  :root { color-scheme: light dark; --fg: #16181d; --muted: #5b6470; --bg: #ffffff; --rule: #e4e7eb; --accent: #2563eb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #eef1f5; --muted: #9aa4b1; --bg: #0f1115; --rule: #2b3139; --accent: #60a5fa; }
+  }
+  body { margin: 0 auto; padding: 72px 20px; max-width: 34rem; background: var(--bg); color: var(--fg);
+         font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; text-align: center; }
+  .tick { width: 72px; height: 72px; border-radius: 36px; background: var(--accent); color: #fff;
+          font-size: 38px; line-height: 72px; margin: 0 auto 20px; }
+  h1 { font-size: 1.6rem; margin: 0 0 .5rem; }
+  p { color: var(--muted); }
+  a.btn { display: inline-block; margin-top: 24px; padding: 14px 26px; border-radius: 10px;
+          background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
+  footer { margin-top: 48px; border-top: 1px solid var(--rule); padding-top: 16px; font-size: .85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="tick">&check;</div>
+  <h1>Email confirmed</h1>
+  <p>Your NitoPath account is ready. Open the app and sign in.</p>
+  <p style="font-size:.9rem">If you were resetting a password and landed here instead of the app,
+     open the link on the phone that has NitoPath installed.</p>
+  <a class="btn" href="nitopath://">Open NitoPath</a>
+  <footer>
+    <a href="./">Privacy policy and terms</a> · <a href="mailto:Nitopath@gmail.com">Nitopath@gmail.com</a>
+  </footer>
+</body>
+</html>
