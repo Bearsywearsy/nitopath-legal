@@ -3,50 +3,130 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NitoPath — Legal</title>
+<title>NitoPath: navigation that knows where the cameras are</title>
+<meta name="description" content="NitoPath is a driving navigation app that shows where automated license plate readers are and plans routes that pass fewer of them, or more of them.">
+<link rel="canonical" href="https://nitopath.com/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="NitoPath">
+<meta property="og:description" content="Driving directions that show where license plate cameras are, so you can plan around them.">
+<meta property="og:image" content="https://nitopath.com/icon.png">
+<meta property="og:url" content="https://nitopath.com/">
 <style>
-  :root { color-scheme: light dark; --fg: #16181d; --muted: #5b6470; --bg: #ffffff; --rule: #e4e7eb; --accent: #2563eb; }
+  :root { color-scheme: light dark; --fg: #16181d; --muted: #5b6470; --bg: #ffffff; --card: #f6f7f9;
+          --rule: #e4e7eb; --accent: #2563eb; }
   @media (prefers-color-scheme: dark) {
-    :root { --fg: #eef1f5; --muted: #9aa4b1; --bg: #0f1115; --rule: #2b3139; --accent: #60a5fa; }
+    :root { --fg: #eef1f5; --muted: #9aa4b1; --bg: #0f1115; --card: #171a20; --rule: #2b3139; --accent: #60a5fa; }
   }
-  body { margin: 0 auto; padding: 56px 20px 80px; max-width: 42rem; background: var(--bg); color: var(--fg);
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
          font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-  h1 { font-size: 2rem; margin-bottom: .25rem; }
-  p.tag { color: var(--muted); margin-top: 0; }
-  ul { list-style: none; padding: 0; margin: 2rem 0; }
-  li { border: 1px solid var(--rule); border-radius: 12px; margin-bottom: 12px; }
-  li a { display: block; padding: 18px 20px; text-decoration: none; color: inherit; }
-  li a:hover { border-color: var(--accent); }
-  .title { font-weight: 700; color: var(--accent); }
-  .desc { color: var(--muted); font-size: .9rem; }
-  footer { border-top: 1px solid var(--rule); padding-top: 1rem; color: var(--muted); font-size: .85rem; }
+  main, footer { margin: 0 auto; padding: 0 20px; max-width: 52rem; }
+  a { color: var(--accent); }
+
+  .hero { text-align: center; padding: 72px 0 48px; }
+  .hero img { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 8px 28px rgba(0,0,0,.25); }
+  .hero h1 { font-size: 2.6rem; margin: 20px 0 6px; letter-spacing: -.02em; }
+  .hero p { font-size: 1.2rem; color: var(--muted); margin: 0 auto; max-width: 34rem; }
+  .soon { display: inline-block; margin-top: 28px; padding: 10px 18px; border: 1px solid var(--rule);
+          border-radius: 999px; font-weight: 600; font-size: .95rem; }
+
+  h2 { font-size: 1.4rem; margin: 56px 0 8px; }
+  .lead { color: var(--muted); margin-top: 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 14px; margin-top: 20px; }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 14px; padding: 20px 22px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .card p { margin: 0; }
+  .card .price { color: var(--muted); font-size: .9rem; margin: 0 0 10px; }
+  .card ul { margin: 0; padding-left: 1.1rem; }
+  .card li { margin: 4px 0; }
+
+  .links { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 14px; margin-top: 20px; }
+  .links a { display: block; border: 1px solid var(--rule); border-radius: 14px; padding: 18px 20px;
+             text-decoration: none; color: inherit; }
+  .links a:hover { border-color: var(--accent); }
+  .links .title { font-weight: 700; color: var(--accent); display: block; }
+  .links .desc { color: var(--muted); font-size: .9rem; }
+
+  footer { margin-top: 64px; padding-top: 20px; padding-bottom: 56px; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: .85rem; }
+  footer p { margin: 6px 0; }
 </style>
 </head>
 <body>
-<h1>NitoPath</h1>
-<p class="tag">Driving directions that show where automated licence plate readers are, so you can route past fewer of them or more of them.</p>
+<main>
+  <section class="hero">
+    <img src="icon.png" alt="NitoPath app icon" width="112" height="112">
+    <h1>NitoPath</h1>
+    <p>Driving directions that show where automated license plate readers are, so you can plan routes that pass fewer of them, or more of them.</p>
+    <span class="soon">Coming soon to the App Store and Google Play</span>
+  </section>
 
-<ul>
-  <li><a href="privacy-policy.html">
-    <span class="title">Privacy Policy</span><br>
-    <span class="desc">What the app collects, who processes it, and how to delete it.</span>
-  </a></li>
-  <li><a href="terms-of-service.html">
-    <span class="title">Terms of Service</span><br>
-    <span class="desc">Eligibility, safe and lawful use, and the limits of what the app can do.</span>
-  </a></li>
-</ul>
+  <h2>How it works</h2>
+  <p class="lead">Some drivers want to pass fewer cameras. Others would rather stay on monitored roads. NitoPath does both, and is honest about what it knows.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>See the cameras</h3>
+      <p>Every license plate reader that volunteers have mapped in OpenStreetMap, shown on the map around you.</p>
+    </div>
+    <div class="card">
+      <h3>Choose your route</h3>
+      <p>Compare routes by travel time and camera count, then pick the one that suits the drive.</p>
+    </div>
+    <div class="card">
+      <h3>Drive with alerts</h3>
+      <p>Turn-by-turn guidance with spoken directions and a heads-up as you approach a camera.</p>
+    </div>
+  </div>
 
-<h2>Deleting your account and data</h2>
-<p>
-  In the app, open <strong>Account → Delete account</strong>. This permanently removes your profile,
-  settings, saved places, saved routes, trip history and camera reports. If you cannot open the app,
-  email <a href="mailto:Nitopath@gmail.com">Nitopath@gmail.com</a> from the address on the account.
-</p>
+  <h2>Free and Pro</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Free</h3>
+      <p class="price">No account or subscription needed</p>
+      <ul>
+        <li>Turn-by-turn navigation with voice</li>
+        <li>Address search and rerouting</li>
+        <li>Saved places and trip history</li>
+        <li>Multiple stops, avoid highways or tolls</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>NitoPath Pro</h3>
+      <p class="price">$3.99 a month or $30 a year, with a 3-day free trial</p>
+      <ul>
+        <li>Camera markers on the map</li>
+        <li>Camera alerts while you drive</li>
+        <li>Camera-aware route planning</li>
+        <li>Full-screen Drive mode</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Policies and support</h2>
+  <div class="links">
+    <a href="privacy-policy.html">
+      <span class="title">Privacy Policy</span>
+      <span class="desc">What the app collects, who processes it, and how to delete it.</span>
+    </a>
+    <a href="terms-of-service.html">
+      <span class="title">Terms of Service</span>
+      <span class="desc">Eligibility, safe and lawful use, and the limits of what the app can do.</span>
+    </a>
+  </div>
+
+  <h2 id="delete-account">Deleting your account and data</h2>
+  <p>
+    In the app, open <strong>Account → Delete account</strong>. This permanently removes your profile,
+    settings, saved places, saved routes, trip history and camera reports. If you cannot open the app,
+    email <a href="mailto:Nitopath@gmail.com">Nitopath@gmail.com</a> from the address on the account.
+  </p>
+</main>
 
 <footer>
+  <p>Camera data is crowdsourced and may be incomplete or out of date. Always obey traffic laws and posted signs.</p>
   <p>Camera locations © OpenStreetMap contributors (ODbL), largely mapped by the DeFlock community.
-     Routing and search by openrouteservice, with OSRM and Photon as fallbacks. Map by Google Maps.</p>
+     Routing and search by openrouteservice, with OSRM and Photon as fallbacks.</p>
   <p>Contact: <a href="mailto:Nitopath@gmail.com">Nitopath@gmail.com</a></p>
 </footer>
 </body>
