@@ -1,0 +1,8 @@
+title: NitoPath
+description: Driving directions that show where license plate cameras are, so you can plan around them.
+url: https://nitopath.com
+contact_email: Nitopath@gmail.com
+permalink: /news/:year/:month/:title/
+markdown: kramdown
+exclude:
+  - README.md
