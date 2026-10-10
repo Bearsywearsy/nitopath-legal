@@ -8,7 +8,14 @@
       {% for l in links %}{% assign p = l | split: "|" %}
       <a href="{{ p[0] }}"{% if page.url == p[0] or page.section == p[0] %} aria-current="page"{% endif %}>{{ p[1] }}</a>
       {% endfor %}
+      <a class="nav-signin" id="nav-signin" href="/app/account/">Sign in</a>
       <a class="nav-cta" href="/app/">Open app</a>
     </nav>
   </div>
 </header>
+<script>
+  // The web app keeps its sign-in in this browser, so the header can tell whether you're signed in.
+  try {
+    if (localStorage.getItem('sb-fqwllcpaadrwujyzddda-auth-token')) document.getElementById('nav-signin').textContent = 'Account';
+  } catch (e) {}
+</script>
