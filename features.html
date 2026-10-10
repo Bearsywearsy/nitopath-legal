@@ -2,7 +2,7 @@
 layout: default
 title: Features
 permalink: /features/
-description: Everything NitoPath does, from free turn-by-turn navigation to camera-aware routing and alerts.
+description: Everything NitoPath does, from free navigation and camera map to camera-aware routing and alerts.
 ---
 <section class="page-head">
   <div class="wrap">
@@ -11,9 +11,9 @@ description: Everything NitoPath does, from free turn-by-turn navigation to came
   </div>
 </section>
 
-<section>
+<section class="alt">
   <div class="wrap">
-    <h2>Camera features <span style="color:var(--muted);font-weight:600;font-size:1rem">NitoPath Pro</span></h2>
+    <h2>Cameras <span style="color:var(--muted);font-weight:600;font-size:1rem">Free</span></h2>
     <div class="grid">
       <div class="card">
         <div class="icon cam">{% include icons/camera.svg %}</div>
@@ -21,14 +21,27 @@ description: Everything NitoPath does, from free turn-by-turn navigation to came
         <p>Every mapped automated license plate reader around you, grouped into clusters when you zoom out.</p>
       </div>
       <div class="card">
-        <div class="icon">{% include icons/route.svg %}</div>
-        <h3>Fewer cameras, or more</h3>
-        <p>Plan a route that passes fewer cameras, or one that stays on monitored roads. The fastest sensible route stays the default, so you never get a huge detour by surprise.</p>
-      </div>
-      <div class="card">
         <div class="icon">{% include icons/clock.svg %}</div>
         <h3>Compare side by side</h3>
         <p>See each route's time, distance and camera count before you pick one.</p>
+      </div>
+      <div class="card">
+        <div class="icon cam">{% include icons/camera.svg %}</div>
+        <h3>Camera details</h3>
+        <p>Tap a camera to see its operator, which way it faces, what it's mounted on and when it was last confirmed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Planning around cameras <span style="color:var(--muted);font-weight:600;font-size:1rem">NitoPath Pro</span></h2>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">{% include icons/route.svg %}</div>
+        <h3>Fewer cameras, or more</h3>
+        <p>Plan a route that passes fewer cameras, or one that stays on monitored roads. The fastest sensible route stays the default, so you never get a huge detour by surprise.</p>
       </div>
       <div class="card">
         <div class="icon">{% include icons/bell.svg %}</div>
@@ -39,11 +52,6 @@ description: Everything NitoPath does, from free turn-by-turn navigation to came
         <div class="icon">{% include icons/nav.svg %}</div>
         <h3>Drive mode</h3>
         <p>Camera warnings while you drive with no destination set, with your speed on screen.</p>
-      </div>
-      <div class="card">
-        <div class="icon cam">{% include icons/camera.svg %}</div>
-        <h3>Camera details</h3>
-        <p>Tap a camera to see its operator, which way it faces, what it's mounted on and when it was last confirmed.</p>
       </div>
       <div class="card">
         <div class="icon">{% include icons/edit.svg %}</div>
