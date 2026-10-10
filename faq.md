@@ -9,7 +9,7 @@ description: Answers about NitoPath's camera data, subscriptions, privacy and ac
 ## The app
 
 <details><summary>What is an ALPR?</summary>
-<p>An automated license plate reader is a camera that photographs passing vehicles and reads their plates automatically, usually recording the time and place. They're mounted on poles, traffic lights and police cars.</p>
+<p>An automated license plate reader is a camera that photographs passing vehicles and reads their plates automatically, usually recording the time and place. They're mounted on poles, traffic lights and police cars. Our <a href="/alpr/">explainer</a> has more.</p>
 </details>
 
 <details><summary>Is NitoPath for avoiding cameras?</summary>
@@ -18,6 +18,10 @@ description: Answers about NitoPath's camera data, subscriptions, privacy and ac
 
 <details><summary>Which phones does it run on?</summary>
 <p>NitoPath is coming to iPhone and Android. Follow the <a href="/news/">News</a> page for release dates.</p>
+</details>
+
+<details><summary>Can I use NitoPath on a computer?</summary>
+<p>Yes. <a href="/app/">Open it in your browser</a> to search, plan and compare routes, and export them as GPX. Subscriptions are bought in the phone app; sign in on the web with the same account and the camera features are there too.</p>
 </details>
 
 <details><summary>Do I need an account?</summary>
