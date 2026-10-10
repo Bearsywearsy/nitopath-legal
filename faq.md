@@ -45,7 +45,7 @@ description: Answers about NitoPath's camera data, subscriptions, privacy and ac
 ## Subscription
 
 <details><summary>What's free and what's Pro?</summary>
-<p>Navigation, search, multiple stops, saved places and trip history are free. Cameras on the map, camera-aware routing, camera alerts and Drive mode are Pro. See <a href="/pricing/">Pricing</a>.</p>
+<p>Navigation, search, multiple stops, saved places, trip history, the camera map and each route's camera count are free. Routing around cameras (or toward them), camera alerts and Drive mode are Pro. See <a href="/pricing/">Pricing</a>.</p>
 </details>
 
 <details><summary>How do I cancel?</summary>
