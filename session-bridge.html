@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>NitoPath</title>
+</head>
+<body>
+<script>
+  // Lets the staff portal (staff.nitopath.com) share the web app's sign-in, so signing in or out of
+  // either one does the same in the other. The portal loads this page in a hidden frame and reads or
+  // writes the one sign-in entry through postMessage. Only the portal's address is answered.
+  (function () {
+    var ALLOWED = 'https://staff.nitopath.com';
+    var KEY = 'sb-fqwllcpaadrwujyzddda-auth-token';
+    window.addEventListener('message', function (e) {
+      if (e.origin !== ALLOWED || !e.data || e.data.type !== 'nitopath-session') return;
+      var d = e.data, reply = { type: 'nitopath-session', id: d.id, ok: true, value: null };
+      try {
+        if (d.key !== KEY) throw new Error('key');
+        if (d.op === 'get') reply.value = localStorage.getItem(KEY);
+        else if (d.op === 'set' && typeof d.value === 'string') localStorage.setItem(KEY, d.value);
+        else if (d.op === 'remove') localStorage.removeItem(KEY);
+        else throw new Error('op');
+      } catch (err) { reply.ok = false; }
+      e.source.postMessage(reply, ALLOWED);
+    });
+    // Tell the portal when the web app signs in or out in another tab.
+    window.addEventListener('storage', function (e) {
+      if (e.key === KEY && window.parent !== window) {
+        window.parent.postMessage({ type: 'nitopath-session-changed', value: e.newValue }, ALLOWED);
+      }
+    });
+    if (window.parent !== window) window.parent.postMessage({ type: 'nitopath-session-ready' }, ALLOWED);
+  })();
+</script>
+</body>
+</html>

@@ -16,47 +16,22 @@
 </header>
 <script>
   // The web app keeps its sign-in in this browser, so the header can tell whether you're signed in.
-  // The staff portal (staff.nitopath.com) shares the same accounts; a sign-in is handed between the two
-  // in the URL fragment, which never reaches a server and is removed from the address bar right away.
+  // Staff also get a link to the staff portal, which shares this sign-in through /session-bridge.html.
   (function () {
-    var KEY = 'sb-fqwllcpaadrwujyzddda-auth-token', PORTAL = 'https://staff.nitopath.com/';
-    var STAFF_KEY = 'nitopath-staff-user';
-    function b64e(s) { return btoa(unescape(encodeURIComponent(s))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); }
-    function b64d(s) { s = s.replace(/-/g, '+').replace(/_/g, '/'); while (s.length % 4) s += '='; return decodeURIComponent(escape(atob(s))); }
+    var KEY = 'sb-fqwllcpaadrwujyzddda-auth-token', STAFF_KEY = 'nitopath-staff-user';
     try {
-      // Arriving from the portal: store its sign-in where the web app looks for it.
-      var m = /[#&]nitopath-session=([^&]+)/.exec(location.hash);
-      if (m) {
-        history.replaceState(null, '', location.pathname + location.search);
-        var incoming = JSON.parse(b64d(m[1]));
-        if (incoming && incoming.access_token && incoming.refresh_token && incoming.user) {
-          localStorage.setItem(KEY, JSON.stringify(incoming));
-        }
-        var go = /[?&]go=([^&]+)/.exec(location.search);
-        go = go && decodeURIComponent(go[1]);
-        if (go && go.charAt(0) === '/' && go.charAt(1) !== '/' && go.charAt(1) !== '\\') { location.replace(go); return; }
-      }
       var session = JSON.parse(localStorage.getItem(KEY) || 'null');
       if (!session || !session.access_token) { localStorage.removeItem(STAFF_KEY); return; }
       document.getElementById('nav-signin').textContent = 'Account';
-      var uid = session.user && session.user.id;
-      var link = document.getElementById('nav-staff');
-      function show() { link.hidden = false; }
-      link.addEventListener('click', function (e) {
-        var s = JSON.parse(localStorage.getItem(KEY) || 'null');
-        if (s && s.access_token && s.refresh_token) {
-          e.preventDefault();
-          location.href = PORTAL + '#nitopath-session=' + b64e(JSON.stringify({ access_token: s.access_token, refresh_token: s.refresh_token }));
-        }
-      });
-      // Remember a positive answer so the link stays put even after the short-lived sign-in token expires.
-      if (uid && localStorage.getItem(STAFF_KEY) === uid) show();
-      fetch(PORTAL + 'api/staff-check', { headers: { Authorization: 'Bearer ' + session.access_token } })
+      var uid = session.user && session.user.id, link = document.getElementById('nav-staff');
+      // Remember a yes so the link stays put after the short-lived sign-in token expires.
+      if (uid && localStorage.getItem(STAFF_KEY) === uid) link.hidden = false;
+      fetch('https://staff.nitopath.com/api/staff-check', { headers: { Authorization: 'Bearer ' + session.access_token } })
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (j) {
           if (!j) return;
-          if (j.staff) { localStorage.setItem(STAFF_KEY, uid); show(); }
-          else { localStorage.removeItem(STAFF_KEY); link.hidden = true; }
+          if (j.staff) localStorage.setItem(STAFF_KEY, uid); else localStorage.removeItem(STAFF_KEY);
+          link.hidden = !j.staff;
         })
         .catch(function () {});
     } catch (e) {}
