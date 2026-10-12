@@ -162,6 +162,36 @@ details > *:not(summary) { margin-top: 0; color: var(--muted); }
 .nav a.nav-signin { color: var(--fg); box-shadow: inset 0 0 0 1px var(--rule); margin-left: 6px; }
 @media (max-width: 900px) { .nav a.nav-signin, .nav a.nav-cta { margin: 4px 0 0; text-align: center; } }
 
+/* Motion and polish (assets/motion.js). */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+.motion-pending .hero-copy, .motion-pending .hero-map { visibility: hidden; }
+.hero h1 .w { display: inline-block; will-change: transform, filter; }
+/* ShinyText: a light sweep across the eyebrow. */
+.eyebrow { background: linear-gradient(110deg, currentColor 40%, #fff 50%, currentColor 60%) 0 0 / 250% 100%;
+           -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+           animation: shine 5s linear infinite; }
+@keyframes shine { from { background-position: 100% 0; } to { background-position: -150% 0; } }
+/* SpotlightCard: a soft glow under the pointer. */
+.spot { position: relative; isolation: isolate; transition: border-color .25s, transform .25s, box-shadow .25s; }
+.spot::before { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1; pointer-events: none; opacity: 0;
+                transition: opacity .3s; background: radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%); }
+.spot:hover::before { opacity: 1; }
+.spot:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--rule)); transform: translateY(-3px);
+              box-shadow: 0 14px 34px -18px color-mix(in srgb, var(--accent) 60%, transparent); }
+.btn { transition: filter .2s, box-shadow .25s; }
+.btn:not(.ghost):hover { box-shadow: 0 10px 28px -10px color-mix(in srgb, var(--accent) 80%, transparent); filter: brightness(1.06); }
+/* The header tucks away while scrolling down. */
+.site-header { transition: transform .35s ease, box-shadow .35s ease; }
+.site-header.scrolled { box-shadow: 0 6px 24px -14px rgba(0,0,0,.45); }
+.site-header.tucked { transform: translateY(-100%); }
+@media (prefers-reduced-motion: reduce) {
+  .eyebrow { animation: none; }
+  .spot, .site-header { transition: none; }
+  .spot:hover { transform: none; }
+}
+
 /* Halloween: on all of October (the script in _layouts/default.html adds the class). Delete after the season. */
 .bats { display: none; }
 .halloween { --accent: #c2410c; --accent-fg: #ffffff; --card: #fff7ed; --rule: #fbe2cc; }
