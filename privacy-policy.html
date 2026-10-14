@@ -20,13 +20,15 @@
 </head>
 <body>
 <h1>NitoPath Privacy Policy</h1>
-<p class="updated">Last updated 2026-10-02</p>
+<p class="updated">Last updated 2026-10-09</p>
 <p>This policy explains what NitoPath collects when you use NitoPath, why, who else sees it, and what control you have.</p>
 <p>Short version: the app works without an account and we keep as little as we can. We do not sell your personal information and we do not use it for advertising.</p>
 <h2>Location</h2>
 <p>Your device location is used to centre the map, to plan routes from where you are, and to warn you about nearby cameras. Camera alerts are calculated on your phone.</p>
 <p>When you plan a route or search for an address, the start, destination and search text are sent to our servers and on to our routing and search providers (openrouteservice, and Photon or OSRM as fallbacks) so they can return a route or results. Those requests are not tied to your account.</p>
-<p>We do not track your location in the background. The app only receives location while it is open and you have granted permission, and you can revoke that permission in Android settings at any time.</p>
+<p>We do not track your location in the background outside a trip. The app only asks for permission to use location while you are using it, and you can revoke that permission in your phone's settings at any time.</p>
+<p>During a trip or in Drive mode, NitoPath keeps receiving your location if the phone locks or you switch to another app, so directions and camera alerts continue. Your phone shows this (a location indicator on iPhone, a notification on Android), and it stops when the trip or Drive mode ends. These positions are used on your phone only and are not uploaded. You can turn this off in Settings under "Guide with the screen locked".</p>
+<p>The camera log (a count of the known cameras you have driven past, with dates) is worked out and stored on your phone only. It is never uploaded or synced to your account. You can turn it off or clear it under Camera log, and deleting the app deletes it.</p>
 <p>Your continuous location trail is never uploaded. If you are signed in and you start a trip, we store a record of that trip (start, destination, distance, duration, camera counts) in your history, which you can delete.</p>
 <h2>Account information</h2>
 <p>If you create an account we store your email address, a password (hashed, never in readable form), and an optional display name.</p>
@@ -40,7 +42,8 @@
 <p>The app stores data on your device (settings, recent searches, your login session) using your phone's own storage.</p>
 <h2>Who processes your data</h2>
 <p>Supabase — hosting, database and authentication (servers in the United States).</p>
-<p>Google Maps SDK for Android — displays the map. Google receives map usage data directly under its own privacy policy.</p>
+<p>Google Maps SDK for Android — displays the map on Android. Google receives map usage data directly under its own privacy policy.</p>
+<p>Apple Maps (MapKit) — displays the map on iOS. Apple receives map usage data directly under its own privacy policy.</p>
 <p>openrouteservice (HeiGIT, Germany) — routing and address search. Receives the coordinates and search text needed to answer a request.</p>
 <p>Photon by Komoot and the OSRM demo service — fallbacks when the above is unavailable.</p>
 <p>OpenStreetMap Overpass servers — our servers download camera locations by geographic region. These requests come from our servers and contain no user data.</p>
@@ -67,7 +70,8 @@
 <footer>
 <p>Camera locations © OpenStreetMap contributors, licensed under the Open Database License (ODbL), largely mapped by the DeFlock community.</p>
 <p>Routing and address search powered by openrouteservice, with OSRM and Photon by Komoot as fallbacks.</p>
-<p>Map tiles and display by Google Maps.</p>
+<p>Map tiles and display by Google Maps on Android and Apple Maps on iOS.</p>
+<p>In the web app, map tiles by OpenFreeMap using OpenMapTiles and © OpenStreetMap contributors, drawn with MapLibre.</p>
 <p>Contact: Nitopath@gmail.com</p>
 </footer>
 </body>
