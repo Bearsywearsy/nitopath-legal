@@ -235,3 +235,48 @@ html.lenis, html.lenis body { height: auto; }
 }
 @media (max-width: 820px) { .bats svg:nth-child(1) { top: 12px; width: 30px; } .bats svg:nth-child(2) { top: 20px; left: 30%; width: 20px; } }
 .nav a[hidden] { display: none; }
+
+/* Two-up panels (stacked on phones, side by side on computers). */
+.duo { display: grid; gap: 48px; }
+.duo .panel + .panel { border-top: 1px solid var(--rule); padding-top: 48px; }
+
+/* Computers get their own layout: a full-height hero, a wider page, and sections laid out side by side
+   instead of the phone's single centred column. */
+@media (min-width: 1100px) and (hover: hover) {
+  .wrap { max-width: 76rem; padding: 0 40px; }
+  .narrow { max-width: 50rem; }
+  section { padding: 96px 0; }
+
+  .hero { min-height: min(calc(100vh - 60px), 860px); display: flex; align-items: center; padding: 64px 0; }
+  .hero > .wrap { width: 100%; }
+  .hero-split { grid-template-columns: 1.2fr .8fr; gap: 72px; }
+  .hero h1 { font-size: clamp(3.4rem, 4.6vw, 4.6rem); max-width: 40rem; }
+  .hero p { font-size: 1.3rem; max-width: 34rem; }
+  .hero .btn { padding: 15px 26px; font-size: 1.05rem; }
+  .hero-map { width: 360px; }
+
+  /* How it works reads as a timeline: the numbered steps sit on one line running across the page. */
+  .steps { position: relative; gap: 40px; margin-top: 48px; }
+  .steps::before { content: ""; position: absolute; left: 8%; right: 8%; top: 39px; height: 2px; z-index: 0;
+                   background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: .45; }
+  .steps li { position: relative; z-index: 1; padding: 22px 28px 28px; }
+
+  /* Feature sections: the heading sits beside its cards, which stack as wide rows. */
+  .feature-row { display: grid; grid-template-columns: .85fr 1.15fr; gap: 72px; align-items: start; text-align: left; }
+  .feature-row.flip { grid-template-columns: 1.15fr .85fr; }
+  .feature-row.flip .feature-intro { order: 2; }
+  .feature-intro { position: sticky; top: 120px; }
+  .feature-intro h2 { font-size: 2.6rem; }
+  .feature-row .lead { margin-left: 0; }
+  .feature-row .grid { grid-template-columns: 1fr; margin-top: 0; gap: 14px; }
+  .feature-row .card { display: grid; grid-template-columns: auto 1fr; column-gap: 20px; align-items: start; padding: 24px 28px; }
+  .feature-row .card .icon { grid-row: span 2; margin: 2px 0 0; width: 48px; height: 48px; }
+  .feature-row .card .icon svg { width: 24px; height: 24px; }
+
+  .split { gap: 72px; }
+  .split h2 { font-size: 2.6rem; }
+
+  .duo { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .duo .panel { background: var(--bg); border: 1px solid var(--rule); border-radius: 20px; padding: 48px 44px; }
+  .duo .panel + .panel { border-top: 1px solid var(--rule); padding-top: 48px; }
+}
