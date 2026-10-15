@@ -35,8 +35,9 @@
 <script defer src="/assets/motion.js?v={{ site.time | date: '%s' }}"></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 {% include header.html %}
-<main>
+<main id="main">
 {{ content }}
 </main>
 {% include footer.html %}

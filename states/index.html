@@ -1,0 +1,36 @@
+---
+layout: default
+title: License plate cameras by state
+permalink: /states/
+description: How many automated license plate readers volunteers have mapped in each US state, ranked, with a page and 3D map for every state.
+---
+{% assign cov = site.data.coverage %}
+<section class="page-head">
+  <div class="wrap">
+    <h1>License plate cameras by state</h1>
+    <p class="lead">{{ cov.total_text }} mapped license plate readers across {{ cov.states }} states, counted <time datetime="{{ cov.updated }}">{{ cov.updated | date: "%B %-d, %Y" }}</time>. Pick a state for its map and busiest areas.</p>
+    <div class="state-filter">
+      <label class="sr-only" for="state-q">Find a state</label>
+      <input id="state-q" type="search" placeholder="Find a state" autocomplete="off">
+    </div>
+  </div>
+</section>
+<section class="states-all">
+  <div class="wrap">
+    <ol class="ranking ranking-all" id="state-list">
+      {% for s in cov.ranking %}
+      <li data-name="{{ s.name | downcase }}"><a href="/states/{{ s.slug }}/"><span class="r-rank">{{ s.rank }}</span><span class="r-name">{{ s.name }}</span><span class="r-bar"><i style="width:{{ s.bar }}%"></i></span><span class="r-n">{{ s.total_text }}</span></a></li>
+      {% endfor %}
+    </ol>
+    <p class="stats-note">Counts are cameras volunteers have mapped in OpenStreetMap, recounted every day. A low count can mean fewer volunteers rather than fewer cameras.</p>
+  </div>
+</section>
+<script>
+  (function () {
+    var q = document.getElementById('state-q'), items = document.querySelectorAll('#state-list li');
+    q.addEventListener('input', function () {
+      var v = q.value.trim().toLowerCase();
+      items.forEach(function (li) { li.hidden = v && li.getAttribute('data-name').indexOf(v) === -1; });
+    });
+  })();
+</script>
