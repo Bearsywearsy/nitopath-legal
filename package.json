@@ -1,0 +1,14 @@
+{
+  "name": "nitopath-site-tools",
+  "private": true,
+  "type": "module",
+  "description": "Build tools for nitopath.com. The site itself is plain Jekyll; nothing here runs on GitHub Pages.",
+  "scripts": {
+    "coverage": "node scripts/build-coverage.mjs --fetch"
+  },
+  "devDependencies": {
+    "d3-geo": "3.1.1",
+    "topojson-client": "3.1.0",
+    "us-atlas": "3.0.1"
+  }
+}

@@ -1,0 +1,33 @@
+# Recounts the cameras behind the homepage map, the live numbers and the state pages, once a day.
+# It asks NitoPath's public `cameras` function, rebuilds the data files and commits them (the "last updated"
+# time changes every run, so this is one small commit a day); GitHub Pages then republishes the site. Run it by hand from the Actions tab any time.
+name: Refresh camera coverage
+on:
+  schedule:
+    - cron: '17 9 * * *'   # 09:17 UTC daily
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: refresh-coverage
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/build-coverage.mjs --fetch
+      - name: Commit the new counts
+        run: |
+          git add assets/data/coverage.json _data/coverage.json states
+          git diff --cached --quiet && { echo "Nothing changed."; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh camera coverage ($(date -u +%Y-%m-%d))"
+          git push

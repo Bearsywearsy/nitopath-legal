@@ -3,23 +3,62 @@ layout: default
 title: NitoPath
 description: NitoPath is a driving navigation app that shows where automated license plate readers are and plans routes that pass fewer of them, or more of them.
 ---
-<section class="hero">
+{% assign cov = site.data.coverage %}
+<section class="hero hero-map3d">
   {% include halloween-bats.html %}
-  <div class="wrap hero-split">
-    <div class="hero-copy">
-      <p class="eyebrow">Navigation for iPhone, Android and the web</p>
-      <h1>Navigation on your terms</h1>
-      <p>See every mapped automated license plate reader, then plan a route that passes fewer of them, or more of them. Put privacy back in your hands.</p>
-      <div class="actions">
-        <a class="btn" href="/app/">Open NitoPath in your browser</a>
-        <a class="btn ghost" href="/features/">See what it does</a>
-      </div>
-      <p class="hero-note">Phone apps coming soon to the App Store and Google Play.</p>
+  <div class="covmap" data-lift="210" data-shift=".28" data-label="Interactive 3D map of the {{ cov.total_text }} license plate cameras mapped across the United States. Taller, brighter columns mean more cameras.">
+    <img class="covmap-poster" src="/assets/coverage-poster.webp" alt="" width="1600" height="900" fetchpriority="high">
+    <div class="covmap-controls" role="group" aria-label="Fly the map to">
+      <button type="button" class="chip" data-fly="us" aria-pressed="true">Whole US</button>
+      <button type="button" class="chip" data-fly="west">West</button>
+      <button type="button" class="chip" data-fly="mid">Midwest</button>
+      <button type="button" class="chip" data-fly="south">South</button>
+      <button type="button" class="chip" data-fly="east">Northeast</button>
     </div>
-    <figure class="hero-art">
-      {% include hero-map.svg %}
-      <figcaption>Illustration</figcaption>
-    </figure>
+    <div class="covmap-legend" aria-hidden="true"><span class="ramp"></span>fewer · more cameras per 35-mile square</div>
+    <p class="covmap-credit">Camera data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors · <a href="/data/">How we count</a></p>
+    <p class="covmap-hint">Drag to move · right-drag to spin and tilt · scroll to zoom · click a column for its state</p>
+  </div>
+  <div class="wrap hero-copy">
+    <p class="eyebrow">Navigation for iPhone, Android and the web</p>
+    <h1>Navigation on your terms</h1>
+    <p>See all <strong>{{ cov.total_text }}</strong> mapped license plate readers in the US, then plan a route that passes fewer of them, or more of them. Put privacy back in your hands.</p>
+    <div class="actions">
+      <a class="btn" href="/app/">Open NitoPath in your browser</a>
+      <a class="btn ghost" href="#near">Cameras near you</a>
+    </div>
+    <p class="hero-note">Phone apps coming soon to the App Store and Google Play.</p>
+  </div>
+</section>
+
+<section class="stats-band" aria-label="Camera numbers">
+  <div class="wrap">
+    <dl class="stats">
+      <div><dt>cameras mapped in the US</dt><dd data-count="{{ cov.total }}">{{ cov.total_text }}</dd></div>
+      <div><dt>states with mapped cameras</dt><dd data-count="{{ cov.states }}">{{ cov.states }}</dd></div>
+      <div><dt>35-mile squares that have at least one</dt><dd data-count="{{ cov.areas }}">{{ cov.areas_text }}</dd></div>
+      <div><dt>numbers last updated</dt><dd class="stats-date"><time datetime="{{ cov.updated }}" data-ago>{{ cov.updated | date: "%b %-d, %Y" }}</time></dd></div>
+    </dl>
+    <p class="stats-note">The app refreshes each area from OpenStreetMap every few hours. These totals are recounted every day. <a href="/data/">How we count</a></p>
+  </div>
+</section>
+
+<section id="near" class="near-section" data-near>
+  <div class="wrap">
+    <div class="near-head">
+      <h2>How many cameras are near you?</h2>
+      <p class="lead">Type a city, ZIP code or address. You'll get the live count within 10 miles, the nearest one and who runs them. No account needed.</p>
+    </div>
+    <form class="near-form" role="search" autocomplete="off">
+      <div class="near-field">
+        <label class="sr-only" for="near-q">City, ZIP code or address</label>
+        <input id="near-q" type="search" placeholder="City, ZIP code or address" role="combobox" aria-autocomplete="list" aria-controls="near-list" aria-expanded="false" enterkeyhint="search">
+        <ul id="near-list" class="near-suggest" role="listbox" hidden></ul>
+      </div>
+      <button class="btn" type="submit">Count cameras</button>
+      <button class="btn ghost" type="button" data-locate>Use my location</button>
+    </form>
+    <div class="near-result" aria-live="polite" hidden></div>
   </div>
 </section>
 
@@ -35,28 +74,41 @@ description: NitoPath is a driving navigation app that shows where automated lic
 </section>
 
 <section>
-  <div class="wrap center feature-row">
+  <div class="wrap routes-demo">
     <div class="feature-intro">
       <h2>Both directions matter</h2>
-      <p class="lead">Some drivers want to pass fewer cameras. Others would rather stay on monitored roads. NitoPath does both, and is honest about what it knows.</p>
+      <p class="lead">Some drivers want to pass fewer cameras. Others would rather stay on monitored roads. NitoPath plans either, and shows exactly what each route trades.</p>
+      <div class="seg" role="group" aria-label="Route preference">
+        <button type="button" data-route="few" aria-pressed="true">Fewer cameras</button>
+        <button type="button" data-route="fast" aria-pressed="false">Fastest</button>
+        <button type="button" data-route="more" aria-pressed="false">More cameras</button>
+      </div>
+      <dl class="route-meta" aria-live="polite">
+        <div><dt>Time</dt><dd data-m="time">24 min</dd></div>
+        <div><dt>Distance</dt><dd data-m="dist">9.8 mi</dd></div>
+        <div><dt>Cameras</dt><dd data-m="cams">1</dd></div>
+      </dl>
+      <p class="route-cap">Illustration. In the app every route shows its real time, distance and camera count.</p>
     </div>
-    <div class="grid" style="text-align:left">
-      <div class="card">
-        <div class="icon cam">{% include icons/camera.svg %}</div>
-        <h3>See the cameras</h3>
-        <p>Every license plate reader that volunteers have mapped in OpenStreetMap, shown on the map around you.</p>
-      </div>
-      <div class="card">
-        <div class="icon">{% include icons/route.svg %}</div>
-        <h3>Choose your route</h3>
-        <p>Compare routes side by side by travel time, distance and how many cameras each one passes.</p>
-      </div>
-      <div class="card">
-        <div class="icon">{% include icons/bell.svg %}</div>
-        <h3>Get a heads-up</h3>
-        <p>Spoken and vibrating warnings before each camera, on a planned route or just driving around.</p>
-      </div>
-    </div>
+    <svg class="route-svg" viewBox="0 0 900 380" role="img" aria-labelledby="route-svg-t">
+      <title id="route-svg-t">Three routes between the same two points: the fastest passes 4 cameras, the fewer-cameras route passes 1, the more-cameras route passes 5</title>
+      <g class="streets"><path d="M0 80H900M0 190H900M0 300H900M140 0V380M330 0V380M520 0V380M720 0V380"/></g>
+      <path class="route" data-r="fast" d="M70 300 L330 300 L330 190 L720 190 L720 80 L840 80"/>
+      <path class="route" data-r="more" d="M70 300 L520 300 L520 190 L720 190 L720 80 L840 80"/>
+      <path class="route" data-r="few" d="M70 300 L140 300 L140 80 L520 80 L520 30 L780 30 L840 80"/>
+      <g class="cams">
+        <g data-on="fast"><circle cx="330" cy="245" r="16"/><circle cx="330" cy="245" r="6"/></g>
+        <g data-on="fast"><circle cx="480" cy="190" r="16"/><circle cx="480" cy="190" r="6"/></g>
+        <g data-on="fast more"><circle cx="620" cy="190" r="16"/><circle cx="620" cy="190" r="6"/></g>
+        <g data-on="fast more"><circle cx="720" cy="135" r="16"/><circle cx="720" cy="135" r="6"/></g>
+        <g data-on="more"><circle cx="260" cy="300" r="16"/><circle cx="260" cy="300" r="6"/></g>
+        <g data-on="more"><circle cx="420" cy="300" r="16"/><circle cx="420" cy="300" r="6"/></g>
+        <g data-on="more"><circle cx="520" cy="245" r="16"/><circle cx="520" cy="245" r="6"/></g>
+        <g data-on="few"><circle cx="140" cy="190" r="16"/><circle cx="140" cy="190" r="6"/></g>
+      </g>
+      <circle class="pt-a" cx="70" cy="300" r="10"/><circle class="pt-b" cx="840" cy="80" r="11"/>
+      <text x="70" y="338" text-anchor="middle">Start</text><text x="840" y="122" text-anchor="middle">Destination</text>
+    </svg>
   </div>
 </section>
 
@@ -78,6 +130,11 @@ description: NitoPath is a driving navigation app that shows where automated lic
         <p>Up to 8 stops on a trip, with options to avoid highways or tolls.</p>
       </div>
       <div class="card">
+        <div class="icon cam">{% include icons/camera.svg %}</div>
+        <h3>Tap any camera</h3>
+        <p>See who operates it, which way it faces, what it's mounted on and when someone last confirmed it, straight from OpenStreetMap.</p>
+      </div>
+      <div class="card">
         <div class="icon">{% include icons/bookmark.svg %}</div>
         <h3>Saved places and history</h3>
         <p>Keep home, work and favourite places one tap away, and look back at past trips.</p>
@@ -87,6 +144,21 @@ description: NitoPath is a driving navigation app that shows where automated lic
 </section>
 
 <section>
+  <div class="wrap states-teaser">
+    <div class="feature-intro">
+      <h2>State by state</h2>
+      <p class="lead">Where volunteers have mapped the most license plate readers. Each state has its own page with a 3D map and its busiest areas.</p>
+      <p><a class="btn ghost" href="/states/">See all {{ cov.states }} states</a></p>
+    </div>
+    <ol class="ranking">
+      {% for s in cov.ranking limit: 10 %}
+      <li><a href="/states/{{ s.slug }}/"><span class="r-name">{{ s.name }}</span><span class="r-bar"><i style="width:{{ s.bar }}%"></i></span><span class="r-n">{{ s.total_text }}</span></a></li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="alt">
   <div class="wrap split">
     <div>
       <h2>Use it on any screen</h2>
@@ -94,14 +166,14 @@ description: NitoPath is a driving navigation app that shows where automated lic
       <p style="margin-top:20px"><a class="btn" href="/app/">Open the web app</a></p>
     </div>
     <div class="card">
-      <div class="icon cam">{% include icons/camera.svg %}</div>
-      <h3>Tap any camera</h3>
-      <p>See who operates it, which way it faces, what it's mounted on and when someone last confirmed it, straight from OpenStreetMap.</p>
+      <div class="icon">{% include icons/bell.svg %}</div>
+      <h3>Get a heads-up</h3>
+      <p>Spoken and vibrating warnings before each camera, on a planned route or just driving around. Part of NitoPath Pro.</p>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section>
   <div class="wrap duo">
     <div class="panel center">
       <h2>What are license plate readers?</h2>
@@ -116,10 +188,14 @@ description: NitoPath is a driving navigation app that shows where automated lic
   </div>
 </section>
 
-<section>
+<section class="alt">
   <div class="wrap narrow center">
     <h2>Where the data comes from</h2>
     <p class="lead">Camera locations come from OpenStreetMap, mapped by volunteers, many through the DeFlock project. NitoPath refreshes its copy every few hours. Crowdsourced data is never complete, so a route with no known cameras can still pass ones nobody has mapped yet.</p>
     <p style="margin-top:20px"><a href="/faq/">Read the FAQ</a></p>
   </div>
 </section>
+
+<script type="module" src="/assets/coverage.js?v={{ site.time | date: '%s' }}"></script>
+<script type="module" src="/assets/near.js?v={{ site.time | date: '%s' }}"></script>
+<script type="module" src="/assets/home.js?v={{ site.time | date: '%s' }}"></script>

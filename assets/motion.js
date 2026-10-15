@@ -118,7 +118,7 @@
     var obj = { v: 0 };
     gsap.to(obj, { v: target, duration: 1.4, ease: 'power2.out',
       scrollTrigger: { trigger: el, start: 'top 90%', once: true },
-      onUpdate: function () { el.textContent = obj.v.toFixed(decimals); } });
+      onUpdate: function () { el.textContent = Number(obj.v.toFixed(decimals)).toLocaleString('en-US', { minimumFractionDigits: decimals }); } });
   });
 
   // Buttons lean slightly toward the pointer.
