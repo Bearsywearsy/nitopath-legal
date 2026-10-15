@@ -449,3 +449,19 @@ h3 { font-family: var(--display); font-weight: 800; }
 .skip-link { position: absolute; left: 12px; top: -60px; z-index: 50; background: var(--accent); color: var(--accent-fg); padding: 10px 14px; border-radius: 10px; font-weight: 700; }
 .skip-link:focus { top: 10px; }
 @media (max-width: 899px) { .hero-map3d .covmap-controls { bottom: 34px; } .hero-map3d .covmap-legend { bottom: 78px; } .covmap .covmap-credit { bottom: 10px; } }
+/* Buy Me a Coffee link (website only; the app takes no tips outside the stores) */
+a.bmc-button, .site-footer .cols a.bmc-button { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 6px 18px 6px 14px;
+  background: #40DCA5; color: #ffffff !important; border: 1px solid #000000; border-radius: 10px; text-decoration: none !important;
+  font-family: 'Cookie', cursive; font-size: 1.6rem; line-height: 1.4; transition: filter .2s, transform .2s, box-shadow .25s; }
+a.bmc-button:hover, .site-footer .cols a.bmc-button:hover { filter: brightness(1.05); transform: translateY(-1px); box-shadow: 0 8px 22px -10px #40DCA5; }
+.bmc-button svg { flex: none; }
+.site-footer .bmc-note { margin-top: 10px; font-size: .88rem; }
+.prose .bmc-button { margin: 4px 0 8px; }
+/* In the header the button sits at the far right on computers and beside the menu button on phones */
+.site-header .bmc-button { order: 3; margin: 0 0 0 10px; padding: 1px 14px 1px 10px; font-size: 1.35rem; gap: 6px; white-space: nowrap; }
+.site-header .bmc-button svg { width: 18px; height: 18px; }
+.site-header .nav { order: 2; margin-left: auto; }
+.site-header .nav-button { order: 4; margin-left: 8px; }
+@media (max-width: 1240px) and (min-width: 1061px) { .site-header .bmc-button span { display: none; } .site-header .bmc-button { padding: 6px 9px; } }
+@media (max-width: 1060px) { .site-header .bmc-button { margin-left: auto; } }
+@media (max-width: 360px) { .site-header .bmc-button span { display: none; } .site-header .bmc-button { padding: 6px 9px; } }
