@@ -6,7 +6,9 @@
 {% if page.url == "/" %}<title>NitoPath: navigation that knows where the cameras are</title>{% else %}<title>{{ page.title }} · NitoPath</title>{% endif %}
 <meta name="description" content="{{ page.description | default: site.description }}">
 <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:site_name" content="NitoPath">
 <meta property="og:title" content="{{ page.title | default: site.title }}">
