@@ -28,6 +28,12 @@ On the sign-in screen tap **Forgot password**. The email link opens a page on ni
 ### I want to cancel my subscription
 See [How do I cancel?](/faq/#subscription) in the FAQ.
 
+## Support the project
+
+NitoPath is independent. If it's useful to you and you'd like to chip in, you can buy us a coffee. It's entirely optional and doesn't change anything in the app.
+
+<div class="bmc-wrap">{% include bmc-button.html %}</div>
+
 ## Other help
 
 - [Frequently asked questions](/faq/)
