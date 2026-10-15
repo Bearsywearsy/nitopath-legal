@@ -289,3 +289,11 @@ a.bmc-button:hover, .site-footer .cols a.bmc-button:hover { filter: brightness(1
 .bmc-button svg { flex: none; }
 .site-footer .bmc-note { margin-top: 10px; font-size: .88rem; }
 .prose .bmc-button { margin: 4px 0 8px; }
+/* In the header the button sits at the far right on computers and beside the menu button on phones */
+.site-header .bmc-button { order: 3; margin: 0 0 0 10px; padding: 1px 14px 1px 10px; font-size: 1.35rem; gap: 6px; white-space: nowrap; }
+.site-header .bmc-button svg { width: 18px; height: 18px; }
+.site-header .nav { order: 2; margin-left: auto; }
+.site-header .nav-button { order: 4; margin-left: 8px; }
+@media (max-width: 1100px) and (min-width: 901px) { .site-header .bmc-button span { display: none; } .site-header .bmc-button { padding: 6px 9px; } }
+@media (max-width: 900px) { .site-header .bmc-button { margin-left: auto; } }
+@media (max-width: 360px) { .site-header .bmc-button span { display: none; } .site-header .bmc-button { padding: 6px 9px; } }
