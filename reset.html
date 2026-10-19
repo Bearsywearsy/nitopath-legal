@@ -72,11 +72,28 @@ const show = (text, kind) => {
 const params = new URLSearchParams(location.hash.slice(1) || location.search.slice(1));
 const access_token = params.get('access_token');
 const refresh_token = params.get('refresh_token');
+const token_hash = params.get('token_hash');
 const linkError = params.get('error_description') || params.get('error');
+
+const ready = (user) => {
+  who.textContent = user?.email ? `Signed in as ${user.email}` : 'Link verified.';
+  form.style.display = 'block';
+  // Keep the tokens out of the address bar and browser history.
+  history.replaceState(null, '', location.pathname);
+};
 
 if (linkError) {
   who.textContent = '';
   show(decodeURIComponent(linkError).replace(/\+/g, ' ') + ' — request a new reset email from the app.', 'err');
+} else if (token_hash) {
+  // A custom email template can link here with ?token_hash=...&type=recovery instead of a session.
+  const { data, error } = await supabase.auth.verifyOtp({ token_hash, type: 'recovery' });
+  if (error) {
+    who.textContent = '';
+    show('That link has expired or was already used. Request a new one from the app.', 'err');
+  } else {
+    ready(data.user);
+  }
 } else if (!access_token || !refresh_token) {
   who.textContent = '';
   show('This page needs to be opened from the link in your reset email.', 'err');
@@ -86,10 +103,7 @@ if (linkError) {
     who.textContent = '';
     show('That link has expired or was already used. Request a new one from the app.', 'err');
   } else {
-    who.textContent = data.user?.email ? `Signed in as ${data.user.email}` : 'Link verified.';
-    form.style.display = 'block';
-    // Keep the tokens out of the address bar and browser history.
-    history.replaceState(null, '', location.pathname);
+    ready(data.user);
   }
 }
 
