@@ -19,6 +19,13 @@
           background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
   footer { margin-top: 48px; border-top: 1px solid var(--rule); padding-top: 16px; font-size: .85rem; color: var(--muted); }
 </style>
+<script>
+  // A password-reset link that lands here (Supabase sends it to the Site URL when the reset page is
+  // missing from its Redirect URLs) goes on to the reset page with its one-time session intact.
+  if (/(^|[#?&])type=recovery(&|$)/.test(location.hash + '&' + location.search.slice(1))) {
+    location.replace('/reset.html' + location.search + location.hash);
+  }
+</script>
 </head>
 <body>
   <div class="tick">&check;</div>

@@ -37,6 +37,13 @@
 <script defer src="/assets/vendor/SplitText.min.js?v=3.13.0"></script>
 <script defer src="/assets/vendor/lenis.min.js?v=1.3.4"></script>
 <script defer src="/assets/motion.js?v={{ site.time | date: '%s' }}"></script>
+<script>
+  // A password-reset link that lands here (Supabase sends it to the Site URL when the reset page is
+  // missing from its Redirect URLs) goes on to the reset page with its one-time session intact.
+  if (/(^|[#?&])type=recovery(&|$)/.test(location.hash + '&' + location.search.slice(1))) {
+    location.replace('/reset.html' + location.search + location.hash);
+  }
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
