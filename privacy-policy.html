@@ -42,11 +42,13 @@
 <p>The app stores data on your device (settings, recent searches, your login session) using your phone's own storage.</p>
 <h2>Who processes your data</h2>
 <p>Supabase — hosting, database and authentication (servers in the United States).</p>
-<p>Google Maps SDK for Android — displays the map on Android. Google receives map usage data directly under its own privacy policy.</p>
-<p>Apple Maps (MapKit) — displays the map on iOS. Apple receives map usage data directly under its own privacy policy.</p>
-<p>openrouteservice (HeiGIT, Germany) — routing and address search. Receives the coordinates and search text needed to answer a request.</p>
-<p>Photon by Komoot and the OSRM demo service — fallbacks when the above is unavailable.</p>
-<p>OpenStreetMap Overpass servers — our servers download camera locations by geographic region. These requests come from our servers and contain no user data.</p>
+<p>Mapbox — draws the map. Your device downloads map tiles from Mapbox, which sees the area being viewed and your IP address. The app turns off Mapbox's optional usage telemetry.</p>
+<p>Our own routing server (United States) — plans routes. Receives the start, stops and destination of a route request and nothing that identifies you.</p>
+<p>openrouteservice (HeiGIT, Germany) — address search, and routing when our server is unavailable. Receives the coordinates and search text needed to answer a request.</p>
+<p>Photon by Komoot and the OSRM demo service — fallbacks for address search and routing.</p>
+<p>Apple Maps (MapKit), on iPhone only — address suggestions while you type. Apple receives the search text directly under its own privacy policy.</p>
+<p>Google Play and RevenueCat — if you subscribe on Android, Google Play handles the payment and RevenueCat confirms it to us. We receive your subscription status, never your card details.</p>
+<p>OpenStreetMap Overpass servers — our servers download camera locations by geographic region, and look up places such as gas stations near a point when you add a stop. These requests come from our servers, carry only the area or point being searched, and nothing that identifies you.</p>
 <p>We do not sell personal information, we do not share it with data brokers, and we do not use it for advertising or profiling.</p>
 <h2>Legal requests</h2>
 <p>We will only disclose personal information if we are legally required to, and we will resist requests we believe are invalid or overbroad, to the extent the law allows.</p>
