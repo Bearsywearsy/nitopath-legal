@@ -20,7 +20,7 @@ Email [Nitopath@gmail.com](mailto:Nitopath@gmail.com?subject=Delete%20my%20accou
 
 ## Delete some of your data and keep your account
 
-In the app, open **Saved**:
+In the app, open **Saved & history** (from the menu on the map, or Account → Saved places, routes & history):
 
 - **Saved places and saved routes:** tap the bin icon next to any one to delete it.
 - **Trip history:** tap **Clear history** to delete every trip.
