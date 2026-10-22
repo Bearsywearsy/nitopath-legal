@@ -14,7 +14,7 @@ Tell us what phone you have and what happened, and include a screenshot if you c
 ## Quick fixes
 
 ### The map is empty or there are no cameras
-Camera markers are part of NitoPath Pro. If you're subscribed and still see none, check that you're signed in to the same account and that location is allowed, then close and reopen the app.
+The camera map is free for everyone. If you see no cameras, check that the cameras switch is on in Settings under Display, and that you have a connection, then close and reopen the app.
 
 ### Routes take a long time or fail
 Very long trips are planned in sections, which can take a few seconds. If it fails, check your connection and try again. Tell us the start and end points if it keeps happening.
