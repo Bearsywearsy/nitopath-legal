@@ -16,10 +16,12 @@
 <meta property="og:image" content="{{ site.url }}/icon.png">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <script>
-  // Halloween look all of October, in the visitor's own time zone. ?halloween=1 or 0 forces it on or off.
+  // Thanksgiving look from November 1 through Thanksgiving Day (fourth Thursday of November), in the
+  // visitor's own time zone, then it switches itself off. ?thanksgiving=1 or 0 forces it on or off.
   (function () {
-    var f = /[?&]halloween=([01])/.exec(location.search);
-    if (f ? f[1] === '1' : new Date().getMonth() === 9) document.documentElement.classList.add('halloween');
+    var d = new Date(), f = /[?&]thanksgiving=([01])/.exec(location.search);
+    var day = 22 + (11 - new Date(d.getFullYear(), 10, 1).getDay()) % 7;
+    if (f ? f[1] === '1' : d.getMonth() === 10 && d.getDate() <= day) document.documentElement.classList.add('thanksgiving');
   })();
 </script>
 <script>
