@@ -1,0 +1,140 @@
+/* Thanksgiving decorations (loaded only while <html> has the `thanksgiving` class). The colours stay in
+   site.css so they apply before this file arrives; everything drawn lives in thanksgiving.js. */
+@property --spread { syntax: "<number>"; inherits: true; initial-value: 10.5; }
+@property --cspread { syntax: "<number>"; inherits: true; initial-value: 12.5; }
+
+.tg-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* ---- Buttons and small touches ---- */
+.thanksgiving .btn:not(.ghost) { background: linear-gradient(180deg, #e08a1e, #b45309 55%, #8f3f06); border-color: #7a3505; color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,236,200,.45), 0 6px 18px -8px rgba(180,83,9,.8); text-shadow: 0 1px 0 rgba(80,30,0,.45); }
+.thanksgiving .btn:not(.ghost):hover { filter: brightness(1.08); box-shadow: inset 0 1px 0 rgba(255,236,200,.5), 0 12px 28px -10px rgba(217,119,6,.9); }
+.thanksgiving .hero .btn.ghost { border-color: rgba(252,211,77,.45); }
+.thanksgiving .hero .btn.ghost:hover { background: rgba(252,211,77,.1); }
+.thanksgiving ::selection { background: #f59e0b; color: #1a0f05; }
+
+/* ---- Header garland ---- */
+.tg-garland { position: absolute; left: 0; right: 0; top: 100%; height: 28px; overflow: hidden; pointer-events: none; }
+.tg-garland svg { display: block; filter: drop-shadow(0 2px 2px rgba(0,0,0,.25)); }
+.tg-gl { animation: tg-dangle 4s ease-in-out infinite alternate; }
+@keyframes tg-dangle { from { transform: rotate(-9deg); } to { transform: rotate(9deg); } }
+
+/* ---- Hero ---- */
+.thanksgiving .hero { background:
+    radial-gradient(900px 420px at 72% 112%, rgba(234,120,20,.55) 0%, transparent 62%),
+    radial-gradient(700px 380px at 8% -18%, rgba(127,29,29,.75) 0%, transparent 65%),
+    linear-gradient(180deg, #170d08, #1d1009 60%, #24120a), var(--hero); }
+.tg-leaves { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; }
+.tg-leaves-front { z-index: 4; opacity: .85; }
+.page-head { position: relative; overflow: hidden; isolation: isolate; }
+.page-head > .wrap { position: relative; z-index: 2; }
+
+/* The crew: props behind and in front, walkers crossing, the boss standing guard. */
+.tg-crew { position: relative; width: 100%; max-width: 35rem; height: 210px; margin-top: 10px; container-type: inline-size; }
+.tg-crew .tg-props { position: absolute; left: 0; bottom: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.tg-crew .tg-props-front { z-index: 3; }
+.tg-lane { position: absolute; inset: 0; overflow: hidden; z-index: 1; pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.tg-turkey { position: absolute; bottom: 0; cursor: pointer; pointer-events: auto; -webkit-tap-highlight-color: transparent; outline: none; }
+.tg-turkey .tk { display: block; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 4px 6px rgba(0,0,0,.45)); }
+.tk-flip { width: 100%; height: 100%; transition: transform .35s cubic-bezier(.3,1.4,.5,1); }
+.tg-boss { right: 0; width: 200px; height: 200px; bottom: -4px; z-index: 2; }
+.tg-boss.facing-left .tk-flip { transform: scaleX(-1); }
+.tg-walker { left: 0; width: 92px; height: 92px; animation: tg-walk 13s linear infinite; }
+.tg-walker.t2 { width: 76px; height: 76px; }
+.tg-walker.t3 { width: 100px; height: 100px; }
+@keyframes tg-walk { from { transform: translateX(-120px); } to { transform: translateX(calc(100cqw + 20px)); } }
+.tg-walker:hover, .tg-walker.gobbling { animation-play-state: paused; }
+
+/* Turkey parts. Every part transforms in the drawing's own coordinates. */
+.tk * { transform-box: view-box; }
+.tk-f { transform-origin: 92px 118px; transform: rotate(calc(var(--i) * var(--spread) * 1deg - 4deg)); }
+.tk-c { transform-origin: 92px 118px; transform: rotate(calc(var(--i) * var(--cspread) * 1deg - 4deg)); }
+.tk-fan, .tk-cov { transform-origin: 92px 118px; }
+.tk-body { transform-origin: 108px 168px; }
+.tk-head { transform-origin: 138px 108px; }
+.tk-wattle { transform-origin: 158px 66px; }
+.tk-snood { transform-origin: 161px 49px; }
+.tk-lid { transform-origin: 157.5px 51px; transform: scaleY(0); }
+.tk-leg-far { transform-origin: 106px 160px; }
+.tk-leg-near { transform-origin: 120px 158px; }
+
+/* Boss: breathes, blinks, swings his snood, looks where the pointer is, and puts on a full display. */
+.tg-boss .tk { animation: tk-display 7s ease-in-out infinite; }
+.tg-boss .tk-body { animation: tk-breathe 2.6s ease-in-out infinite; }
+.tg-boss .tk-head { transform: rotate(var(--look, 0deg)); transition: transform .4s ease-out; }
+.tk-snood { animation: tk-snood 2.2s ease-in-out infinite alternate; }
+.tk-wattle { animation: tk-snood 2.6s ease-in-out infinite alternate-reverse; }
+.tk-lid { animation: tk-blink 4.6s infinite; }
+@keyframes tk-display {
+  0%, 52%, 100% { --spread: 9.6; --cspread: 11.5; }
+  60% { --spread: 12; --cspread: 13.6; }
+  63% { --spread: 11.5; } 66% { --spread: 12.1; } 69% { --spread: 11.6; } 72% { --spread: 12.1; }
+  86% { --spread: 11.8; --cspread: 13.4; }
+}
+@keyframes tk-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.025, 1.015); } }
+@keyframes tk-snood { from { transform: rotate(-6deg); } to { transform: rotate(8deg); } }
+@keyframes tk-blink { 0%, 94%, 100% { transform: scaleY(0); } 96% { transform: scaleY(1); } }
+
+/* Walkers: legs stepping, body bobbing, head pumping forward with each step. */
+.tg-walker .tk { --spread: 10.4; --cspread: 12; }
+.tg-walker .tk-leg-far  { animation: tk-step .5s ease-in-out infinite alternate; }
+.tg-walker .tk-leg-near { animation: tk-step .5s ease-in-out infinite alternate-reverse; }
+.tg-walker .tk-body, .tg-walker .tk-fan, .tg-walker .tk-cov { animation: tk-bob .25s ease-in-out infinite alternate; }
+.tg-walker .tk-head { animation: tk-pump .5s ease-in-out infinite; }
+.tg-walker .tk-fan { animation: tk-bob .25s ease-in-out infinite alternate, tk-fanwag 1s ease-in-out infinite alternate; }
+@keyframes tk-step { from { transform: rotate(-17deg); } to { transform: rotate(17deg); } }
+@keyframes tk-bob { from { transform: translateY(0); } to { transform: translateY(-2.5px); } }
+@keyframes tk-pump { 0%, 100% { transform: translate(0, 0) rotate(0); } 50% { transform: translate(6px, 2px) rotate(5deg); } }
+@keyframes tk-fanwag { from { rotate: -2deg; } to { rotate: 2deg; } }
+
+/* Gobble: tail rattles open, head shakes, wattle flaps, speech bubble pops. */
+.tk-say { position: absolute; left: 50%; bottom: 92%; transform: translate(-50%, 8px) scale(.6); opacity: 0; white-space: nowrap;
+  font: 800 13px/1 system-ui, sans-serif; color: #2a1405; background: #fff4dc; padding: 8px 11px; border-radius: 14px;
+  box-shadow: 0 6px 16px -6px rgba(0,0,0,.6); pointer-events: none; transition: opacity .2s, transform .25s cubic-bezier(.3,1.6,.5,1); z-index: 5; }
+.tk-say::after { content: ""; position: absolute; left: 50%; top: 100%; margin-left: -6px; border: 6px solid transparent; border-top-color: #fff4dc; }
+.tg-boss .tk-say { left: 56%; bottom: 96%; font-size: 15px; }
+.gobbling .tk-say { opacity: 1; transform: translate(-50%, 0) scale(1); }
+.gobbling .tk { animation: tk-rattle 1.3s ease-out !important; }
+.gobbling .tk-head { animation: tk-gobble .13s linear 8 !important; }
+.gobbling .tk-wattle, .gobbling .tk-snood { animation: tk-flap .1s linear 12 alternate !important; }
+.gobbling .tk-body { animation: tk-puff 1.3s ease-out !important; }
+@keyframes tk-rattle {
+  0% { --spread: 9.6; --cspread: 11.5; } 14% { --spread: 12.6; --cspread: 14; }
+  22% { --spread: 11.8; } 30% { --spread: 12.6; } 38% { --spread: 11.8; } 46% { --spread: 12.6; } 54% { --spread: 11.9; }
+  80% { --spread: 12.2; --cspread: 13.6; } 100% { --spread: 10.4; --cspread: 12; } }
+@keyframes tk-gobble { 0%, 100% { transform: rotate(0) translateX(0); } 25% { transform: rotate(-9deg) translateX(-2px); } 75% { transform: rotate(7deg) translateX(3px); } }
+@keyframes tk-flap { from { transform: rotate(-16deg); } to { transform: rotate(18deg); } }
+@keyframes tk-puff { 0% { transform: scale(1); } 15% { transform: scale(1.08, 1.05); } 100% { transform: scale(1); } }
+
+/* ---- Footer harvest scene ---- */
+.thanksgiving .site-footer { border-top: 0; padding-top: 0; background: linear-gradient(180deg, transparent, color-mix(in srgb, #b45309 6%, transparent)); }
+.tg-harvest { position: relative; height: 170px; margin-bottom: 34px; overflow: hidden; container-type: inline-size;
+  border-bottom: 1px solid var(--rule); background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, #f59e0b 10%, transparent) 100%); }
+.tg-harvest .tg-props { position: absolute; left: 0; bottom: 0; display: block; pointer-events: none; }
+.tg-harvest .tg-lane { z-index: 2; }
+.tg-harvest .tg-walker { bottom: 10px; width: 84px; height: 84px; animation-duration: 26s; }
+.tg-harvest .tg-walker.f2 { width: 70px; height: 70px; animation-duration: 21s; }
+.tg-harvest .tg-leaves { z-index: 3; }
+.tg-corn { animation: tg-sway 5s ease-in-out infinite alternate; }
+.tg-wheat { animation: tg-sway 3.6s ease-in-out infinite alternate; }
+.tg-sign { animation: tg-sway 6s ease-in-out infinite alternate; }
+@keyframes tg-sway { from { transform: rotate(-1.6deg); } to { transform: rotate(1.6deg); } }
+
+/* Phones */
+@media (max-width: 820px) {
+  .tg-crew { height: 170px; margin-top: 6px; }
+  .tg-boss { width: 160px; height: 160px; }
+  .tg-walker { width: 74px; height: 74px; animation-duration: 10s; }
+  .tg-walker.t2 { width: 62px; height: 62px; }
+  .tg-walker.t3 { width: 80px; height: 80px; }
+  .tg-harvest { margin-bottom: 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tg-turkey .tk, .tg-turkey .tk *, .tg-gl, .tg-corn, .tg-wheat, .tg-sign { animation: none !important; }
+  .tg-walker { animation: none; }
+  .tg-crew .tg-walker.t1 { transform: translateX(10px); } .tg-crew .tg-walker.t2 { transform: translateX(110px); } .tg-crew .tg-walker.t3 { display: none; }
+  .tg-harvest .tg-walker.f1 { transform: translateX(40cqw); } .tg-harvest .tg-walker.f2 { display: none; }
+}

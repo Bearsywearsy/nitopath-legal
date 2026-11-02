@@ -21,7 +21,13 @@
   (function () {
     var d = new Date(), f = /[?&]thanksgiving=([01])/.exec(location.search);
     var day = 22 + (11 - new Date(d.getFullYear(), 10, 1).getDay()) % 7;
-    if (f ? f[1] === '1' : d.getMonth() === 10 && d.getDate() <= day) document.documentElement.classList.add('thanksgiving');
+    if (!(f ? f[1] === '1' : d.getMonth() === 10 && d.getDate() <= day)) return;
+    document.documentElement.classList.add('thanksgiving');
+    // The decorations themselves load only while the look is on, so other months download nothing extra.
+    var v = '{{ site.time | date: '%s' }}', css = document.createElement('link'), js = document.createElement('script');
+    css.rel = 'stylesheet'; css.href = '/assets/thanksgiving/thanksgiving.css?v=' + v;
+    js.src = '/assets/thanksgiving/thanksgiving.js?v=' + v; js.defer = true;
+    document.head.appendChild(css); document.head.appendChild(js);
   })();
 </script>
 <script>
