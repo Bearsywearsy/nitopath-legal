@@ -193,80 +193,17 @@ html.lenis, html.lenis body { height: auto; }
 }
 
 /* Thanksgiving: on from November 1 through Thanksgiving Day (the script in _layouts/default.html adds
-   the class). Falling leaves over the hero, a leaf garland under the header, and a strutting turkey crew. */
-.leaves, .turkey-parade { display: none; }
+   the class and loads assets/thanksgiving/, which draws the turkeys, leaves, garland and harvest scene). */
 .thanksgiving { --accent: #b45309; --accent-fg: #ffffff; --card: #fffbeb; --rule: #f3e2c3; }
 @media (prefers-color-scheme: dark) {
   .thanksgiving { --accent: #f59e0b; --accent-fg: #170f06; --bg: #13100c; --card: #1d1812; --rule: #352b1f; }
 }
-.thanksgiving .brand::after { content: "🦃"; font-size: 1.05rem; margin-left: -2px; }
-/* A string of autumn leaves hanging from the header. */
-.thanksgiving .site-header::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 14px; pointer-events: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='14'%3E%3Cpath d='M0 2Q24 8 48 2T96 2' stroke='%2378350f' fill='none' stroke-width='1.2'/%3E%3Cpath d='M12 4l3 3-1 5-2-2-2 2-1-5z' fill='%23c2410c'/%3E%3Cpath d='M36 5l3 3-1 5-2-2-2 2-1-5z' fill='%23d97706'/%3E%3Cpath d='M60 4l3 3-1 5-2-2-2 2-1-5z' fill='%23991b1b'/%3E%3Cpath d='M84 5l3 3-1 5-2-2-2 2-1-5z' fill='%23ca8a04'/%3E%3C/svg%3E") repeat-x; }
-.thanksgiving .hero { background: radial-gradient(1100px 480px at 80% 120%, #92400e 0%, transparent 60%),
-                                   radial-gradient(800px 420px at 0% -20%, #7f1d1d 0%, transparent 65%), var(--hero); }
+.thanksgiving .brand::after { content: "\1F983"; font-size: 1.05rem; margin-left: -2px; }
 .thanksgiving .hero::after { background: linear-gradient(90deg, rgba(24,14,7,.92) 38%, rgba(24,14,7,.55) 52%, rgba(24,14,7,0) 70%); }
 @media (max-width: 900px) {
   .thanksgiving .hero::after { background: linear-gradient(180deg, rgba(24,14,7,.6), rgba(24,14,7,.7) 420px, var(--hero) 560px); }
 }
 .thanksgiving .eyebrow { color: #fcd34d !important; }
-.thanksgiving .hero-art::before { background: radial-gradient(closest-side, rgba(217,119,6,.4), transparent); }
-
-/* Leaves drifting down across the hero. */
-.thanksgiving .leaves { display: block; position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
-.leaves i { position: absolute; top: -40px; animation: leaf-fall 13s linear infinite; }
-.leaves span { display: block; animation: leaf-sway 3.2s ease-in-out infinite alternate; }
-.leaves svg { display: block; width: 22px; height: 22px; filter: drop-shadow(0 2px 2px rgba(0,0,0,.35)); }
-.leaves i:nth-child(2)  { left: 4%;  animation-delay: -1s;  animation-duration: 14s; }
-.leaves i:nth-child(3)  { left: 15%; animation-delay: -8s;  animation-duration: 12s; }
-.leaves i:nth-child(4)  { left: 27%; animation-delay: -4s;  animation-duration: 16s; }
-.leaves i:nth-child(5)  { left: 41%; animation-delay: -11s; animation-duration: 13s; }
-.leaves i:nth-child(6)  { left: 52%; animation-delay: -2s;  animation-duration: 15s; }
-.leaves i:nth-child(7)  { left: 63%; animation-delay: -7s;  animation-duration: 12s; }
-.leaves i:nth-child(8)  { left: 74%; animation-delay: -13s; animation-duration: 17s; }
-.leaves i:nth-child(9)  { left: 85%; animation-delay: -5s;  animation-duration: 14s; }
-.leaves i:nth-child(10) { left: 95%; animation-delay: -9s;  animation-duration: 13s; }
-.leaves i:nth-child(11) { left: 35%; animation-delay: -15s; animation-duration: 18s; }
-.leaves i:nth-child(4n+2) svg { fill: #c2410c; }
-.leaves i:nth-child(4n+3) svg { fill: #d97706; width: 17px; height: 17px; }
-.leaves i:nth-child(4n)   svg { fill: #991b1b; width: 26px; height: 26px; }
-.leaves i:nth-child(4n+1) svg { fill: #ca8a04; width: 19px; height: 19px; }
-@keyframes leaf-fall { from { transform: translateY(0) rotate(0); } to { transform: translateY(940px) rotate(400deg); } }
-@keyframes leaf-sway { from { transform: translateX(-26px) rotate(-25deg); } to { transform: translateX(26px) rotate(25deg); } }
-
-/* The turkey crew: three turkeys strutting under the buttons, the leaders in shades, tails flaring. */
-.thanksgiving .turkey-parade { display: block; position: relative; height: 92px; margin-top: 22px; overflow: hidden;
-  container-type: inline-size; pointer-events: none;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
-          mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
-.turkey { position: absolute; bottom: 0; left: 0; width: 96px; height: 90px; overflow: visible;
-          animation: turkey-strut 15s linear infinite; filter: drop-shadow(0 3px 4px rgba(0,0,0,.45)); }
-.turkey.t1 { animation-delay: -6.4s; }
-.turkey.t2 { width: 74px; height: 70px; animation-delay: -3.6s; }
-.turkey.t3 { width: 84px; height: 79px; animation-delay: -1.2s; }
-.turkey * { transform-box: fill-box; }
-.t-bob  { animation: turkey-bob .44s ease-in-out infinite alternate; }
-.t-head { transform-origin: 20% 90%; animation: turkey-peck .88s ease-in-out infinite; }
-.t-leg  { transform-origin: 50% 0; animation: turkey-step .44s ease-in-out infinite alternate; }
-.t-leg-b { animation-direction: alternate-reverse; }
-.t-fan  { transform-origin: 50% 85%; animation: turkey-flare 3.6s ease-in-out infinite; }
-.t2 .t-fan { animation-delay: -1.2s; }
-.t3 .t-fan { animation-delay: -2.4s; }
-@keyframes turkey-strut { from { transform: translateX(-110px); } to { transform: translateX(calc(100cqw + 20px)); } }
-@keyframes turkey-bob   { from { transform: translateY(0); } to { transform: translateY(-3px); } }
-@keyframes turkey-peck  { 0%, 100% { transform: translate(0, 0) rotate(0); } 50% { transform: translate(4px, 1px) rotate(6deg); } }
-@keyframes turkey-step  { from { transform: rotate(-20deg); } to { transform: rotate(20deg); } }
-@keyframes turkey-flare { 0%, 55%, 100% { transform: scale(.82) rotate(0); } 65% { transform: scale(1.1) rotate(-4deg); }
-                          72% { transform: scale(1.06) rotate(4deg); } 80% { transform: scale(1.1) rotate(-3deg); } 90% { transform: scale(.9) rotate(0); } }
-@media (prefers-reduced-motion: reduce) {
-  .thanksgiving .leaves { display: none; }
-  .turkey, .turkey * { animation: none !important; }
-  .turkey.t1 { transform: translateX(180px); } .turkey.t2 { transform: translateX(100px); } .turkey.t3 { transform: translateX(10px); }
-}
-@media (max-width: 820px) {
-  .leaves i:nth-child(n+8) { display: none; }
-  .turkey { animation-duration: 11s; }
-}
 .nav a[hidden] { display: none; }
 
 /* Two-up panels (stacked on phones, side by side on computers). */
