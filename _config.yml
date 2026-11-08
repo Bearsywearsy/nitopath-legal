@@ -3,7 +3,7 @@ description: Driving directions that show where license plate cameras are, so yo
 url: https://nitopath.com
 contact_email: Nitopath@gmail.com
 # Discord invite (e.g. https://discord.gg/xxxx). Leave empty to hide the Discord link on /support/.
-discord_url: ""
+discord_url: "https://discord.gg/DNAttKCqHe"
 permalink: /news/:year/:month/:title/
 markdown: kramdown
 exclude:
