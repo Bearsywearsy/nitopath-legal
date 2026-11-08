@@ -17,7 +17,7 @@ description: Answers about NitoPath's camera data, subscriptions, privacy and ac
 </details>
 
 <details><summary>Which phones does it run on?</summary>
-<p>NitoPath is coming to iPhone and Android. Follow the <a href="/news/">News</a> page for release dates.</p>
+<p>NitoPath is on the App Store for iPhone, and it's coming to Google Play for Android. Follow the <a href="/news/">News</a> page for the Android release.</p>
 </details>
 
 <details><summary>Can I use NitoPath on a computer?</summary>
@@ -39,13 +39,21 @@ description: Answers about NitoPath's camera data, subscriptions, privacy and ac
 </details>
 
 <details><summary>A camera is missing or in the wrong place. What do I do?</summary>
-<p>Use <strong>Report a camera</strong> in the app (you'll need to be signed in). We review reports and approved ones can be added to the map. You can also add it directly at <a href="https://deflock.org/report">deflock.org/report</a>.</p>
+<p>Long-press the spot on the map and tap <strong>Report camera</strong>, or tap the camera button while navigating (you'll need to be signed in). We review reports and approved ones can be added to the map. You can also add it directly at <a href="https://deflock.org/report">deflock.org/report</a>.</p>
 </details>
 
 ## Subscription
 
 <details><summary>What's free and what's Pro?</summary>
-<p>Navigation, search, multiple stops, saved places, trip history, the camera map and each route's camera count are free. Routing around cameras (or toward them), camera alerts and Drive mode are Pro. See <a href="/pricing/">Pricing</a>.</p>
+<p>Navigation, search, multiple stops, saved places, trip history, the camera map and each route's camera count are free. Routing around cameras (or toward them), camera alerts, Drive mode and custom 3D location pins are Pro: $3.99 a month or $29.99 a year, with a 3-day free trial. See <a href="/pricing/">Pricing</a>.</p>
+</details>
+
+<details><summary>I paid but Pro didn't unlock. What now?</summary>
+<p>Check you're signed in to the account you subscribed with, then close the app completely and reopen it. If it's still locked, tap <strong>Restore purchase</strong> on the NitoPath Pro screen. More steps on the <a href="/support/#pro-not-unlocking">Support</a> page.</p>
+</details>
+
+<details><summary>How do I restore my purchase?</summary>
+<p>Sign in with the same NitoPath account, open NitoPath Pro from the menu or Settings → Subscription, and tap <strong>Restore purchase</strong>.</p>
 </details>
 
 <details><summary>How do I cancel?</summary>
@@ -67,7 +75,7 @@ description: Answers about NitoPath's camera data, subscriptions, privacy and ac
 </details>
 
 <details><summary>How do I delete my account?</summary>
-<p>In the app, open Account → Delete account. More options on the <a href="/delete-account/">Delete your account</a> page.</p>
+<p>In the app, open the menu → Account → Delete account. Cancel any subscription in the App Store or Google Play first, since deleting the account doesn't cancel it. More options on the <a href="/delete-account/">Delete your account</a> page.</p>
 </details>
 
 <p style="margin-top:32px">Didn't find your answer? <a href="/support/">Contact support</a>.</p>
