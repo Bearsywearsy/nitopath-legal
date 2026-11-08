@@ -45,7 +45,7 @@ NitoPath is a navigation app with turn-by-turn directions that also shows where 
 <li><strong>iPhone:</strong> Settings → your name → Subscriptions → NitoPath → Cancel Subscription.</li>
 <li><strong>Android:</strong> Google Play → your profile picture → Payments &amp; subscriptions → Subscriptions → NitoPath → Cancel.</li>
 </ul>
-<p>Cancel at least 24 hours before it renews. If you cancel during the 3-day trial and you aren't charged. Deleting the app or your account doesn't cancel a subscription.</p>
+<p>Cancel at least 24 hours before it renews. If you cancel during the 3-day trial, you aren't charged. Deleting the app or your account doesn't cancel a subscription.</p>
 </details>
 
 <details id="refund"><summary>Can I get a refund?</summary>
