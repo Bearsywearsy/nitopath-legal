@@ -4,6 +4,8 @@ url: https://nitopath.com
 contact_email: Nitopath@gmail.com
 # Discord invite (e.g. https://discord.gg/xxxx). Leave empty to hide the Discord link on /support/.
 discord_url: "https://discord.gg/DNAttKCqHe"
+# GoatCounter site code (the "nitopath" in nitopath.goatcounter.com). Leave empty to turn the visit counter off.
+goatcounter_code: "nitopath"
 permalink: /news/:year/:month/:title/
 markdown: kramdown
 exclude:
