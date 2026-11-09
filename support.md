@@ -16,7 +16,7 @@ Jump to: [Subscriptions](#subscriptions) · [Cameras](#cameras) · [The app](#th
 
 ## What NitoPath is
 
-NitoPath is a navigation app with turn-by-turn directions that also shows where automated license plate readers and other traffic cameras are mapped. Seeing every camera and each route's camera count is free. NitoPath Pro plans routes that pass fewer cameras (or more, if you prefer monitored roads) and warns you before each one. It's on the App Store for iPhone, coming to Google Play, and [in your browser](/app/).
+NitoPath is a navigation app with turn-by-turn directions that also shows where automated license plate readers and other traffic cameras are mapped. Seeing every camera and each route's camera count is free. NitoPath Pro plans routes that pass fewer cameras (or more, if you prefer monitored roads) and warns you before each one. It's on the [App Store](https://apps.apple.com/us/app/nitopath/id6824011485) for iPhone, [Google Play](https://play.google.com/store/apps/details?id=com.nitopath.app) for Android, and [in your browser](/app/).
 
 ## Subscriptions
 

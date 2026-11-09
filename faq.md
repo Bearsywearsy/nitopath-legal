@@ -17,7 +17,7 @@ description: Answers about NitoPath's camera data, subscriptions, privacy and ac
 </details>
 
 <details><summary>Which phones does it run on?</summary>
-<p>NitoPath is on the App Store for iPhone, and it's coming to Google Play for Android. Follow the <a href="/news/">News</a> page for the Android release.</p>
+<p>iPhone and iPad from the <a href="https://apps.apple.com/us/app/nitopath/id6824011485">App Store</a>, and Android from <a href="https://play.google.com/store/apps/details?id=com.nitopath.app">Google Play</a>. You can also use it <a href="/app/">in your browser</a>.</p>
 </details>
 
 <details><summary>Can I use NitoPath on a computer?</summary>
