@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-11T17:06:43.192Z",
- "total": 155894,
- "total_text": "155,894",
+ "updated": "2026-11-12T17:35:32.746Z",
+ "total": 156034,
+ "total_text": "156,034",
  "states": 50,
  "areas": 2200,
  "areas_text": "2,200",
@@ -10,11 +10,11 @@
    "name": "California",
    "slug": "california",
    "rank": 1,
-   "total": 22683,
-   "total_text": "22,683",
+   "total": 22696,
+   "total_text": "22,696",
    "areas": 131,
    "bar": 100,
-   "share": 14.6,
+   "share": 14.5,
    "busiest": [
     {
      "name": "Los Angeles County",
@@ -25,9 +25,9 @@
     },
     {
      "name": "Alameda County",
-     "n": 2647,
-     "n_text": "2,647",
-     "lat": 37.751,
+     "n": 2654,
+     "n_text": "2,654",
+     "lat": 37.75,
      "lng": -122.281
     },
     {
@@ -39,8 +39,8 @@
     },
     {
      "name": "Orange County",
-     "n": 1933,
-     "n_text": "1,933",
+     "n": 1935,
+     "n_text": "1,935",
      "lat": 33.772,
      "lng": -117.775
     },
@@ -78,16 +78,16 @@
    "name": "Texas",
    "slug": "texas",
    "rank": 2,
-   "total": 18137,
-   "total_text": "18,137",
+   "total": 18144,
+   "total_text": "18,144",
    "areas": 252,
-   "bar": 80,
+   "bar": 79.9,
    "share": 11.6,
    "busiest": [
     {
      "name": "Harris County",
-     "n": 4796,
-     "n_text": "4,796",
+     "n": 4798,
+     "n_text": "4,798",
      "lat": 29.736,
      "lng": -95.317
     },
@@ -107,10 +107,10 @@
     },
     {
      "name": "Collin County",
-     "n": 1074,
-     "n_text": "1,074",
+     "n": 1076,
+     "n_text": "1,076",
      "lat": 33.153,
-     "lng": -96.783
+     "lng": -96.784
     },
     {
      "name": "Montgomery County",
@@ -146,16 +146,16 @@
    "name": "Georgia",
    "slug": "georgia",
    "rank": 3,
-   "total": 10729,
-   "total_text": "10,729",
+   "total": 10733,
+   "total_text": "10,733",
    "areas": 61,
    "bar": 47.3,
    "share": 6.9,
    "busiest": [
     {
      "name": "DeKalb County",
-     "n": 3245,
-     "n_text": "3,245",
+     "n": 3246,
+     "n_text": "3,246",
      "lat": 33.818,
      "lng": -84.294
     },
@@ -168,8 +168,8 @@
     },
     {
      "name": "Douglas County",
-     "n": 840,
-     "n_text": "840",
+     "n": 841,
+     "n_text": "841",
      "lat": 33.803,
      "lng": -84.64
     },
@@ -189,8 +189,8 @@
     },
     {
      "name": "Bartow County",
-     "n": 407,
-     "n_text": "407",
+     "n": 408,
+     "n_text": "408",
      "lat": 34.129,
      "lng": -84.671
     },
@@ -282,25 +282,25 @@
    "name": "Illinois",
    "slug": "illinois",
    "rank": 5,
-   "total": 8235,
-   "total_text": "8,235",
+   "total": 8242,
+   "total_text": "8,242",
    "areas": 59,
    "bar": 36.3,
    "share": 5.3,
    "busiest": [
     {
      "name": "Cook County",
-     "n": 3404,
-     "n_text": "3,404",
+     "n": 3408,
+     "n_text": "3,408",
      "lat": 41.824,
      "lng": -87.766
     },
     {
      "name": "DuPage County",
-     "n": 966,
-     "n_text": "966",
+     "n": 968,
+     "n_text": "968",
      "lat": 41.773,
-     "lng": -88.156
+     "lng": -88.157
     },
     {
      "name": "Lake County",
@@ -350,18 +350,18 @@
    "name": "Ohio",
    "slug": "ohio",
    "rank": 6,
-   "total": 7547,
-   "total_text": "7,547",
+   "total": 7553,
+   "total_text": "7,553",
    "areas": 52,
    "bar": 33.3,
    "share": 4.8,
    "busiest": [
     {
      "name": "Cuyahoga County",
-     "n": 1344,
-     "n_text": "1,344",
+     "n": 1346,
+     "n_text": "1,346",
      "lat": 41.332,
-     "lng": -81.701
+     "lng": -81.702
     },
     {
      "name": "Hamilton County",
@@ -393,9 +393,9 @@
     },
     {
      "name": "Summit County",
-     "n": 350,
-     "n_text": "350",
-     "lat": 41.264,
+     "n": 351,
+     "n_text": "351",
+     "lat": 41.265,
      "lng": -81.409
     },
     {
@@ -486,8 +486,8 @@
    "name": "Pennsylvania",
    "slug": "pennsylvania",
    "rank": 8,
-   "total": 4577,
-   "total_text": "4,577",
+   "total": 4579,
+   "total_text": "4,579",
    "areas": 41,
    "bar": 20.2,
    "share": 2.9,
@@ -529,8 +529,8 @@
     },
     {
      "name": "Northampton County",
-     "n": 232,
-     "n_text": "232",
+     "n": 233,
+     "n_text": "233",
      "lat": 40.657,
      "lng": -75.377
     },
@@ -622,8 +622,8 @@
    "name": "Virginia",
    "slug": "virginia",
    "rank": 10,
-   "total": 3885,
-   "total_text": "3,885",
+   "total": 3886,
+   "total_text": "3,886",
    "areas": 50,
    "bar": 17.1,
    "share": 2.5,
@@ -651,8 +651,8 @@
     },
     {
      "name": "Chesterfield County",
-     "n": 244,
-     "n_text": "244",
+     "n": 245,
+     "n_text": "245",
      "lat": 37.327,
      "lng": -77.387
     },
@@ -690,16 +690,16 @@
    "name": "Michigan",
    "slug": "michigan",
    "rank": 11,
-   "total": 3826,
-   "total_text": "3,826",
+   "total": 3831,
+   "total_text": "3,831",
    "areas": 59,
    "bar": 16.9,
    "share": 2.5,
    "busiest": [
     {
      "name": "Wayne County",
-     "n": 1440,
-     "n_text": "1,440",
+     "n": 1441,
+     "n_text": "1,441",
      "lat": 42.339,
      "lng": -83.215
     },
@@ -712,10 +712,10 @@
     },
     {
      "name": "Genesee County",
-     "n": 414,
-     "n_text": "414",
-     "lat": 43.188,
-     "lng": -83.787
+     "n": 415,
+     "n_text": "415",
+     "lat": 43.187,
+     "lng": -83.786
     },
     {
      "name": "Kent County",
@@ -758,8 +758,8 @@
    "name": "Indiana",
    "slug": "indiana",
    "rank": 12,
-   "total": 3712,
-   "total_text": "3,712",
+   "total": 3716,
+   "total_text": "3,716",
    "areas": 40,
    "bar": 16.4,
    "share": 2.4,
@@ -773,10 +773,10 @@
     },
     {
      "name": "Lake County",
-     "n": 425,
-     "n_text": "425",
-     "lat": 41.569,
-     "lng": -87.327
+     "n": 429,
+     "n_text": "429",
+     "lat": 41.57,
+     "lng": -87.33
     },
     {
      "name": "St. Joseph County",
@@ -962,17 +962,17 @@
    "name": "Alabama",
    "slug": "alabama",
    "rank": 15,
-   "total": 3162,
-   "total_text": "3,162",
+   "total": 3169,
+   "total_text": "3,169",
    "areas": 49,
-   "bar": 13.9,
+   "bar": 14,
    "share": 2,
    "busiest": [
     {
      "name": "Jefferson County",
-     "n": 575,
-     "n_text": "575",
-     "lat": 33.603,
+     "n": 582,
+     "n_text": "582",
+     "lat": 33.602,
      "lng": -86.73
     },
     {
@@ -987,7 +987,7 @@
      "n": 235,
      "n_text": "235",
      "lat": 32.382,
-     "lng": -86.258
+     "lng": -86.259
     },
     {
      "name": "Madison County",
@@ -1098,16 +1098,16 @@
    "name": "Arizona",
    "slug": "arizona",
    "rank": 17,
-   "total": 2971,
-   "total_text": "2,971",
+   "total": 2973,
+   "total_text": "2,973",
    "areas": 72,
    "bar": 13.1,
    "share": 1.9,
    "busiest": [
     {
      "name": "Maricopa County",
-     "n": 1741,
-     "n_text": "1,741",
+     "n": 1742,
+     "n_text": "1,742",
      "lat": 33.34,
      "lng": -111.786
     },
@@ -1237,7 +1237,7 @@
    "total": 2779,
    "total_text": "2,779",
    "areas": 79,
-   "bar": 12.3,
+   "bar": 12.2,
    "share": 1.8,
    "busiest": [
     {
@@ -1302,18 +1302,18 @@
    "name": "Louisiana",
    "slug": "louisiana",
    "rank": 20,
-   "total": 2394,
-   "total_text": "2,394",
+   "total": 2399,
+   "total_text": "2,399",
    "areas": 45,
    "bar": 10.6,
    "share": 1.5,
    "busiest": [
     {
      "name": "Jefferson",
-     "n": 661,
-     "n_text": "661",
-     "lat": 29.931,
-     "lng": -90.139
+     "n": 662,
+     "n_text": "662",
+     "lat": 29.93,
+     "lng": -90.138
     },
     {
      "name": "East Baton Rouge",
@@ -1438,16 +1438,16 @@
    "name": "New Jersey",
    "slug": "new-jersey",
    "rank": 22,
-   "total": 2277,
-   "total_text": "2,277",
+   "total": 2281,
+   "total_text": "2,281",
    "areas": 11,
-   "bar": 10,
+   "bar": 10.1,
    "share": 1.5,
    "busiest": [
     {
      "name": "Essex County",
-     "n": 1153,
-     "n_text": "1,153",
+     "n": 1157,
+     "n_text": "1,157",
      "lat": 40.711,
      "lng": -74.238
     },
@@ -1506,18 +1506,18 @@
    "name": "Kentucky",
    "slug": "kentucky",
    "rank": 23,
-   "total": 2148,
-   "total_text": "2,148",
+   "total": 2160,
+   "total_text": "2,160",
    "areas": 37,
    "bar": 9.5,
    "share": 1.4,
    "busiest": [
     {
      "name": "Jefferson County",
-     "n": 845,
-     "n_text": "845",
-     "lat": 38.223,
-     "lng": -85.687
+     "n": 857,
+     "n_text": "857",
+     "lat": 38.221,
+     "lng": -85.686
     },
     {
      "name": "Woodford County",
@@ -1574,16 +1574,16 @@
    "name": "Minnesota",
    "slug": "minnesota",
    "rank": 24,
-   "total": 2101,
-   "total_text": "2,101",
+   "total": 2102,
+   "total_text": "2,102",
    "areas": 60,
    "bar": 9.3,
    "share": 1.3,
    "busiest": [
     {
      "name": "Hennepin County",
-     "n": 758,
-     "n_text": "758",
+     "n": 759,
+     "n_text": "759",
      "lat": 44.902,
      "lng": -93.279
     },
@@ -1642,8 +1642,8 @@
    "name": "South Carolina",
    "slug": "south-carolina",
    "rank": 25,
-   "total": 2092,
-   "total_text": "2,092",
+   "total": 2093,
+   "total_text": "2,093",
    "areas": 32,
    "bar": 9.2,
    "share": 1.3,
@@ -1656,18 +1656,18 @@
      "lng": -82.295
     },
     {
-     "name": "Richland County",
-     "n": 230,
-     "n_text": "230",
-     "lat": 34.151,
-     "lng": -80.842
-    },
-    {
      "name": "Charleston County",
      "n": 186,
      "n_text": "186",
      "lat": 32.882,
      "lng": -80.095
+    },
+    {
+     "name": "Lexington County",
+     "n": 179,
+     "n_text": "179",
+     "lat": 34.065,
+     "lng": -81.136
     },
     {
      "name": "Anderson County",
@@ -1691,18 +1691,18 @@
      "lng": -80.83
     },
     {
+     "name": "Richland County",
+     "n": 116,
+     "n_text": "116",
+     "lat": 34.151,
+     "lng": -80.842
+    },
+    {
      "name": "Sumter County",
      "n": 114,
      "n_text": "114",
      "lat": 33.915,
      "lng": -80.345
-    },
-    {
-     "name": "Berkeley County",
-     "n": 106,
-     "n_text": "106",
-     "lat": 33.083,
-     "lng": -80.151
     }
    ]
   },
@@ -1710,16 +1710,16 @@
    "name": "Oklahoma",
    "slug": "oklahoma",
    "rank": 26,
-   "total": 1708,
-   "total_text": "1,708",
+   "total": 1709,
+   "total_text": "1,709",
    "areas": 47,
    "bar": 7.5,
    "share": 1.1,
    "busiest": [
     {
      "name": "Oklahoma County",
-     "n": 727,
-     "n_text": "727",
+     "n": 728,
+     "n_text": "728",
      "lat": 35.419,
      "lng": -97.591
     },
@@ -1843,9 +1843,77 @@
    ]
   },
   {
+   "name": "Maryland",
+   "slug": "maryland",
+   "rank": 28,
+   "total": 1383,
+   "total_text": "1,383",
+   "areas": 13,
+   "bar": 6.1,
+   "share": 0.9,
+   "busiest": [
+    {
+     "name": "Baltimore County",
+     "n": 582,
+     "n_text": "582",
+     "lat": 39.217,
+     "lng": -76.704
+    },
+    {
+     "name": "Prince George's County",
+     "n": 359,
+     "n_text": "359",
+     "lat": 38.895,
+     "lng": -76.849
+    },
+    {
+     "name": "Montgomery County",
+     "n": 130,
+     "n_text": "130",
+     "lat": 39.243,
+     "lng": -77.312
+    },
+    {
+     "name": "Wicomico County",
+     "n": 103,
+     "n_text": "103",
+     "lat": 38.351,
+     "lng": -75.59
+    },
+    {
+     "name": "Washington County",
+     "n": 99,
+     "n_text": "99",
+     "lat": 39.708,
+     "lng": -77.716
+    },
+    {
+     "name": "Queen Anne's County",
+     "n": 41,
+     "n_text": "41",
+     "lat": 38.929,
+     "lng": -76.372
+    },
+    {
+     "name": "Harford County",
+     "n": 30,
+     "n_text": "30",
+     "lat": 39.681,
+     "lng": -76.209
+    },
+    {
+     "name": "Worcester County",
+     "n": 14,
+     "n_text": "14",
+     "lat": 38.31,
+     "lng": -75.164
+    }
+   ]
+  },
+  {
    "name": "Massachusetts",
    "slug": "massachusetts",
-   "rank": 28,
+   "rank": 29,
    "total": 1352,
    "total_text": "1,352",
    "areas": 15,
@@ -1907,74 +1975,6 @@
      "n_text": "12",
      "lat": 41.673,
      "lng": -70.278
-    }
-   ]
-  },
-  {
-   "name": "Maryland",
-   "slug": "maryland",
-   "rank": 29,
-   "total": 1333,
-   "total_text": "1,333",
-   "areas": 13,
-   "bar": 5.9,
-   "share": 0.9,
-   "busiest": [
-    {
-     "name": "Howard County",
-     "n": 491,
-     "n_text": "491",
-     "lat": 39.216,
-     "lng": -76.704
-    },
-    {
-     "name": "Prince George's County",
-     "n": 350,
-     "n_text": "350",
-     "lat": 38.892,
-     "lng": -76.847
-    },
-    {
-     "name": "Montgomery County",
-     "n": 130,
-     "n_text": "130",
-     "lat": 39.243,
-     "lng": -77.312
-    },
-    {
-     "name": "Wicomico County",
-     "n": 103,
-     "n_text": "103",
-     "lat": 38.351,
-     "lng": -75.59
-    },
-    {
-     "name": "Washington County",
-     "n": 99,
-     "n_text": "99",
-     "lat": 39.708,
-     "lng": -77.716
-    },
-    {
-     "name": "Baltimore County",
-     "n": 50,
-     "n_text": "50",
-     "lat": 39.345,
-     "lng": -76.381
-    },
-    {
-     "name": "Queen Anne's County",
-     "n": 41,
-     "n_text": "41",
-     "lat": 38.929,
-     "lng": -76.372
-    },
-    {
-     "name": "Harford County",
-     "n": 30,
-     "n_text": "30",
-     "lat": 39.681,
-     "lng": -76.209
     }
    ]
   },
@@ -2186,10 +2186,10 @@
    "name": "New Mexico",
    "slug": "new-mexico",
    "rank": 33,
-   "total": 1100,
-   "total_text": "1,100",
+   "total": 1102,
+   "total_text": "1,102",
    "areas": 58,
-   "bar": 4.8,
+   "bar": 4.9,
    "share": 0.7,
    "busiest": [
     {
@@ -2201,8 +2201,8 @@
     },
     {
      "name": "Doña Ana County",
-     "n": 99,
-     "n_text": "99",
+     "n": 100,
+     "n_text": "100",
      "lat": 32.297,
      "lng": -106.749
     },
@@ -2215,10 +2215,10 @@
     },
     {
      "name": "Santa Fe County",
-     "n": 85,
-     "n_text": "85",
-     "lat": 35.795,
-     "lng": -106.11
+     "n": 86,
+     "n_text": "86",
+     "lat": 35.798,
+     "lng": -106.109
     },
     {
      "name": "Otero County",
@@ -2254,8 +2254,8 @@
    "name": "Connecticut",
    "slug": "connecticut",
    "rank": 34,
-   "total": 1079,
-   "total_text": "1,079",
+   "total": 1080,
+   "total_text": "1,080",
    "areas": 7,
    "bar": 4.8,
    "share": 0.7,
@@ -2283,10 +2283,10 @@
     },
     {
      "name": "New London County",
-     "n": 158,
-     "n_text": "158",
+     "n": 159,
+     "n_text": "159",
      "lat": 41.335,
-     "lng": -72.138
+     "lng": -72.137
     },
     {
      "name": "Litchfield County",
@@ -2505,17 +2505,17 @@
    "name": "Nebraska",
    "slug": "nebraska",
    "rank": 38,
-   "total": 621,
-   "total_text": "621",
+   "total": 622,
+   "total_text": "622",
    "areas": 59,
    "bar": 2.7,
    "share": 0.4,
    "busiest": [
     {
      "name": "Douglas County",
-     "n": 114,
-     "n_text": "114",
-     "lat": 41.227,
+     "n": 115,
+     "n_text": "115",
+     "lat": 41.226,
      "lng": -96.13
     },
     {
@@ -2573,17 +2573,17 @@
    "name": "Delaware",
    "slug": "delaware",
    "rank": 39,
-   "total": 601,
-   "total_text": "601",
+   "total": 604,
+   "total_text": "604",
    "areas": 4,
-   "bar": 2.6,
+   "bar": 2.7,
    "share": 0.4,
    "busiest": [
     {
      "name": "New Castle County",
-     "n": 484,
-     "n_text": "484",
-     "lat": 39.733,
+     "n": 487,
+     "n_text": "487",
+     "lat": 39.734,
      "lng": -75.639
     },
     {
@@ -2829,8 +2829,8 @@
    "name": "Maine",
    "slug": "maine",
    "rank": 44,
-   "total": 132,
-   "total_text": "132",
+   "total": 133,
+   "total_text": "133",
    "areas": 12,
    "bar": 0.6,
    "share": 0.1,
@@ -2872,10 +2872,10 @@
     },
     {
      "name": "Franklin County",
-     "n": 4,
-     "n_text": "4",
-     "lat": 44.667,
-     "lng": -70.151
+     "n": 5,
+     "n_text": "5",
+     "lat": 44.666,
+     "lng": -70.15
     },
     {
      "name": "Kennebec County",
