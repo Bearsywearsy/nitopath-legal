@@ -1,7 +1,7 @@
 {
- "updated": "2026-11-14T15:48:35.862Z",
- "total": 156351,
- "total_text": "156,351",
+ "updated": "2026-11-15T16:21:07.648Z",
+ "total": 156538,
+ "total_text": "156,538",
  "states": 50,
  "areas": 2201,
  "areas_text": "2,201",
@@ -10,37 +10,37 @@
    "name": "California",
    "slug": "california",
    "rank": 1,
-   "total": 22720,
-   "total_text": "22,720",
+   "total": 22759,
+   "total_text": "22,759",
    "areas": 131,
    "bar": 100,
    "share": 14.5,
    "busiest": [
     {
      "name": "Los Angeles County",
-     "n": 4145,
-     "n_text": "4,145",
+     "n": 4147,
+     "n_text": "4,147",
      "lat": 34.113,
-     "lng": -118.278
+     "lng": -118.279
     },
     {
      "name": "Alameda County",
-     "n": 2660,
-     "n_text": "2,660",
+     "n": 3230,
+     "n_text": "3,230",
      "lat": 37.75,
      "lng": -122.281
     },
     {
      "name": "Riverside County",
-     "n": 2006,
-     "n_text": "2,006",
+     "n": 2008,
+     "n_text": "2,008",
      "lat": 33.795,
      "lng": -117.246
     },
     {
      "name": "Orange County",
-     "n": 1935,
-     "n_text": "1,935",
+     "n": 1936,
+     "n_text": "1,936",
      "lat": 33.772,
      "lng": -117.775
     },
@@ -53,22 +53,22 @@
     },
     {
      "name": "Santa Clara County",
-     "n": 1570,
-     "n_text": "1,570",
-     "lat": 37.294,
+     "n": 1578,
+     "n_text": "1,578",
+     "lat": 37.295,
      "lng": -121.86
     },
     {
      "name": "Sacramento County",
-     "n": 1240,
-     "n_text": "1,240",
+     "n": 1242,
+     "n_text": "1,242",
      "lat": 38.684,
      "lng": -121.291
     },
     {
      "name": "San Bernardino County",
-     "n": 1122,
-     "n_text": "1,122",
+     "n": 1125,
+     "n_text": "1,125",
      "lat": 34.147,
      "lng": -117.318
     }
@@ -78,16 +78,16 @@
    "name": "Texas",
    "slug": "texas",
    "rank": 2,
-   "total": 18154,
-   "total_text": "18,154",
+   "total": 18165,
+   "total_text": "18,165",
    "areas": 252,
-   "bar": 79.9,
+   "bar": 79.8,
    "share": 11.6,
    "busiest": [
     {
      "name": "Harris County",
-     "n": 4800,
-     "n_text": "4,800",
+     "n": 4801,
+     "n_text": "4,801",
      "lat": 29.736,
      "lng": -95.317
     },
@@ -114,9 +114,9 @@
     },
     {
      "name": "Montgomery County",
-     "n": 870,
-     "n_text": "870",
-     "lat": 30.122,
+     "n": 871,
+     "n_text": "871",
+     "lat": 30.121,
      "lng": -95.363
     },
     {
@@ -146,16 +146,16 @@
    "name": "Georgia",
    "slug": "georgia",
    "rank": 3,
-   "total": 10745,
-   "total_text": "10,745",
+   "total": 10747,
+   "total_text": "10,747",
    "areas": 61,
-   "bar": 47.3,
+   "bar": 47.2,
    "share": 6.9,
    "busiest": [
     {
      "name": "DeKalb County",
-     "n": 3249,
-     "n_text": "3,249",
+     "n": 3250,
+     "n_text": "3,250",
      "lat": 33.819,
      "lng": -84.294
     },
@@ -214,10 +214,10 @@
    "name": "Florida",
    "slug": "florida",
    "rank": 4,
-   "total": 10584,
-   "total_text": "10,584",
+   "total": 10587,
+   "total_text": "10,587",
    "areas": 73,
-   "bar": 46.6,
+   "bar": 46.5,
    "share": 6.8,
    "busiest": [
     {
@@ -236,17 +236,17 @@
     },
     {
      "name": "Palm Beach County",
-     "n": 613,
-     "n_text": "613",
+     "n": 614,
+     "n_text": "614",
      "lat": 26.713,
      "lng": -80.097
     },
     {
      "name": "Hillsborough County",
-     "n": 553,
-     "n_text": "553",
+     "n": 554,
+     "n_text": "554",
      "lat": 28.144,
-     "lng": -82.311
+     "lng": -82.312
     },
     {
      "name": "Seminole County",
@@ -282,23 +282,23 @@
    "name": "Illinois",
    "slug": "illinois",
    "rank": 5,
-   "total": 8246,
-   "total_text": "8,246",
+   "total": 8255,
+   "total_text": "8,255",
    "areas": 59,
    "bar": 36.3,
    "share": 5.3,
    "busiest": [
     {
      "name": "Cook County",
-     "n": 3410,
-     "n_text": "3,410",
+     "n": 3413,
+     "n_text": "3,413",
      "lat": 41.824,
      "lng": -87.766
     },
     {
      "name": "DuPage County",
-     "n": 969,
-     "n_text": "969",
+     "n": 974,
+     "n_text": "974",
      "lat": 41.773,
      "lng": -88.157
     },
@@ -318,9 +318,9 @@
     },
     {
      "name": "Will County",
-     "n": 235,
-     "n_text": "235",
-     "lat": 41.319,
+     "n": 236,
+     "n_text": "236",
+     "lat": 41.318,
      "lng": -87.757
     },
     {
@@ -350,10 +350,10 @@
    "name": "Ohio",
    "slug": "ohio",
    "rank": 6,
-   "total": 7558,
-   "total_text": "7,558",
+   "total": 7559,
+   "total_text": "7,559",
    "areas": 52,
-   "bar": 33.3,
+   "bar": 33.2,
    "share": 4.8,
    "busiest": [
     {
@@ -418,16 +418,16 @@
    "name": "New York",
    "slug": "new-york",
    "rank": 7,
-   "total": 5165,
-   "total_text": "5,165",
+   "total": 5169,
+   "total_text": "5,169",
    "areas": 58,
    "bar": 22.7,
    "share": 3.3,
    "busiest": [
     {
      "name": "Queens County",
-     "n": 1785,
-     "n_text": "1,785",
+     "n": 1787,
+     "n_text": "1,787",
      "lat": 40.746,
      "lng": -73.832
     },
@@ -486,18 +486,18 @@
    "name": "Pennsylvania",
    "slug": "pennsylvania",
    "rank": 8,
-   "total": 4619,
-   "total_text": "4,619",
+   "total": 4648,
+   "total_text": "4,648",
    "areas": 41,
-   "bar": 20.3,
+   "bar": 20.4,
    "share": 3,
    "busiest": [
     {
      "name": "Allegheny County",
-     "n": 1423,
-     "n_text": "1,423",
-     "lat": 40.357,
-     "lng": -79.889
+     "n": 1434,
+     "n_text": "1,434",
+     "lat": 40.358,
+     "lng": -79.89
     },
     {
      "name": "Philadelphia County",
@@ -508,10 +508,10 @@
     },
     {
      "name": "Montgomery County",
-     "n": 430,
-     "n_text": "430",
-     "lat": 40.142,
-     "lng": -75.27
+     "n": 445,
+     "n_text": "445",
+     "lat": 40.14,
+     "lng": -75.269
     },
     {
      "name": "Beaver County",
@@ -536,8 +536,8 @@
     },
     {
      "name": "Berks County",
-     "n": 214,
-     "n_text": "214",
+     "n": 215,
+     "n_text": "215",
      "lat": 40.253,
      "lng": -75.764
     },
@@ -554,16 +554,16 @@
    "name": "North Carolina",
    "slug": "north-carolina",
    "rank": 9,
-   "total": 4402,
-   "total_text": "4,402",
+   "total": 4405,
+   "total_text": "4,405",
    "areas": 59,
    "bar": 19.4,
    "share": 2.8,
    "busiest": [
     {
      "name": "Mecklenburg County",
-     "n": 759,
-     "n_text": "759",
+     "n": 761,
+     "n_text": "761",
      "lat": 35.203,
      "lng": -80.794
     },
@@ -576,8 +576,8 @@
     },
     {
      "name": "Gaston County",
-     "n": 258,
-     "n_text": "258",
+     "n": 259,
+     "n_text": "259",
      "lat": 35.264,
      "lng": -81.157
     },
@@ -622,8 +622,8 @@
    "name": "Virginia",
    "slug": "virginia",
    "rank": 10,
-   "total": 3894,
-   "total_text": "3,894",
+   "total": 3895,
+   "total_text": "3,895",
    "areas": 50,
    "bar": 17.1,
    "share": 2.5,
@@ -690,10 +690,10 @@
    "name": "Michigan",
    "slug": "michigan",
    "rank": 11,
-   "total": 3844,
-   "total_text": "3,844",
+   "total": 3867,
+   "total_text": "3,867",
    "areas": 59,
-   "bar": 16.9,
+   "bar": 17,
    "share": 2.5,
    "busiest": [
     {
@@ -712,10 +712,10 @@
     },
     {
      "name": "Genesee County",
-     "n": 415,
-     "n_text": "415",
-     "lat": 43.187,
-     "lng": -83.786
+     "n": 416,
+     "n_text": "416",
+     "lat": 43.188,
+     "lng": -83.787
     },
     {
      "name": "Kent County",
@@ -761,7 +761,7 @@
    "total": 3716,
    "total_text": "3,716",
    "areas": 40,
-   "bar": 16.4,
+   "bar": 16.3,
    "share": 2.4,
    "busiest": [
     {
@@ -826,8 +826,8 @@
    "name": "Tennessee",
    "slug": "tennessee",
    "rank": 13,
-   "total": 3686,
-   "total_text": "3,686",
+   "total": 3691,
+   "total_text": "3,691",
    "areas": 42,
    "bar": 16.2,
    "share": 2.4,
@@ -855,9 +855,9 @@
     },
     {
      "name": "Washington County",
-     "n": 317,
-     "n_text": "317",
-     "lat": 36.332,
+     "n": 318,
+     "n_text": "318",
+     "lat": 36.331,
      "lng": -82.357
     },
     {
@@ -869,8 +869,8 @@
     },
     {
      "name": "Williamson County",
-     "n": 162,
-     "n_text": "162",
+     "n": 163,
+     "n_text": "163",
      "lat": 35.919,
      "lng": -86.7
     },
@@ -894,16 +894,16 @@
    "name": "Missouri",
    "slug": "missouri",
    "rank": 14,
-   "total": 3271,
-   "total_text": "3,271",
+   "total": 3272,
+   "total_text": "3,272",
    "areas": 65,
    "bar": 14.4,
    "share": 2.1,
    "busiest": [
     {
      "name": "St. Louis County",
-     "n": 1078,
-     "n_text": "1,078",
+     "n": 1079,
+     "n_text": "1,079",
      "lat": 38.677,
      "lng": -90.303
     },
@@ -962,23 +962,23 @@
    "name": "Alabama",
    "slug": "alabama",
    "rank": 15,
-   "total": 3169,
-   "total_text": "3,169",
+   "total": 3171,
+   "total_text": "3,171",
    "areas": 49,
    "bar": 13.9,
    "share": 2,
    "busiest": [
     {
      "name": "Jefferson County",
-     "n": 582,
-     "n_text": "582",
+     "n": 584,
+     "n_text": "584",
      "lat": 33.602,
-     "lng": -86.73
+     "lng": -86.729
     },
     {
      "name": "Shelby County",
-     "n": 501,
-     "n_text": "501",
+     "n": 500,
+     "n_text": "500",
      "lat": 33.364,
      "lng": -86.793
     },
@@ -1030,8 +1030,8 @@
    "name": "Colorado",
    "slug": "colorado",
    "rank": 16,
-   "total": 3066,
-   "total_text": "3,066",
+   "total": 3067,
+   "total_text": "3,067",
    "areas": 71,
    "bar": 13.5,
    "share": 2,
@@ -1045,8 +1045,8 @@
     },
     {
      "name": "Jefferson County",
-     "n": 525,
-     "n_text": "525",
+     "n": 526,
+     "n_text": "526",
      "lat": 39.789,
      "lng": -105.096
     },
@@ -1234,8 +1234,8 @@
    "name": "Kansas",
    "slug": "kansas",
    "rank": 19,
-   "total": 2779,
-   "total_text": "2,779",
+   "total": 2781,
+   "total_text": "2,781",
    "areas": 79,
    "bar": 12.2,
    "share": 1.8,
@@ -1249,8 +1249,8 @@
     },
     {
      "name": "Sedgwick County",
-     "n": 523,
-     "n_text": "523",
+     "n": 525,
+     "n_text": "525",
      "lat": 37.687,
      "lng": -97.302
     },
@@ -1302,25 +1302,32 @@
    "name": "Louisiana",
    "slug": "louisiana",
    "rank": 20,
-   "total": 2409,
-   "total_text": "2,409",
+   "total": 2421,
+   "total_text": "2,421",
    "areas": 45,
    "bar": 10.6,
    "share": 1.5,
    "busiest": [
     {
-     "name": "Jefferson",
-     "n": 663,
-     "n_text": "663",
-     "lat": 29.93,
-     "lng": -90.138
-    },
-    {
      "name": "East Baton Rouge",
-     "n": 452,
-     "n_text": "452",
+     "n": 453,
+     "n_text": "453",
      "lat": 30.404,
      "lng": -91.11
+    },
+    {
+     "name": "Orleans",
+     "n": 415,
+     "n_text": "415",
+     "lat": 29.93,
+     "lng": -90.137
+    },
+    {
+     "name": "Jefferson",
+     "n": 259,
+     "n_text": "259",
+     "lat": 30.132,
+     "lng": -90.217
     },
     {
      "name": "Livingston",
@@ -1356,13 +1363,6 @@
      "n_text": "113",
      "lat": 32.568,
      "lng": -93.708
-    },
-    {
-     "name": "Lafourche",
-     "n": 110,
-     "n_text": "110",
-     "lat": 29.705,
-     "lng": -90.737
     }
    ]
   },
@@ -1438,16 +1438,16 @@
    "name": "New Jersey",
    "slug": "new-jersey",
    "rank": 22,
-   "total": 2284,
-   "total_text": "2,284",
+   "total": 2288,
+   "total_text": "2,288",
    "areas": 11,
    "bar": 10.1,
    "share": 1.5,
    "busiest": [
     {
      "name": "Essex County",
-     "n": 1159,
-     "n_text": "1,159",
+     "n": 1161,
+     "n_text": "1,161",
      "lat": 40.711,
      "lng": -74.239
     },
@@ -1467,10 +1467,10 @@
     },
     {
      "name": "Ocean County",
-     "n": 121,
-     "n_text": "121",
+     "n": 123,
+     "n_text": "123",
      "lat": 39.817,
-     "lng": -74.255
+     "lng": -74.254
     },
     {
      "name": "Burlington County",
@@ -1577,7 +1577,7 @@
    "total": 2103,
    "total_text": "2,103",
    "areas": 60,
-   "bar": 9.3,
+   "bar": 9.2,
    "share": 1.3,
    "busiest": [
     {
@@ -1710,16 +1710,16 @@
    "name": "Oklahoma",
    "slug": "oklahoma",
    "rank": 26,
-   "total": 1709,
-   "total_text": "1,709",
+   "total": 1715,
+   "total_text": "1,715",
    "areas": 47,
    "bar": 7.5,
    "share": 1.1,
    "busiest": [
     {
      "name": "Oklahoma County",
-     "n": 728,
-     "n_text": "728",
+     "n": 734,
+     "n_text": "734",
      "lat": 35.419,
      "lng": -97.591
     },
@@ -1781,7 +1781,7 @@
    "total": 1467,
    "total_text": "1,467",
    "areas": 45,
-   "bar": 6.5,
+   "bar": 6.4,
    "share": 0.9,
    "busiest": [
     {
@@ -1846,18 +1846,18 @@
    "name": "Maryland",
    "slug": "maryland",
    "rank": 28,
-   "total": 1434,
-   "total_text": "1,434",
+   "total": 1441,
+   "total_text": "1,441",
    "areas": 13,
    "bar": 6.3,
    "share": 0.9,
    "busiest": [
     {
      "name": "Howard County",
-     "n": 571,
-     "n_text": "571",
+     "n": 575,
+     "n_text": "575",
      "lat": 39.216,
-     "lng": -76.704
+     "lng": -76.706
     },
     {
      "name": "Prince George's County",
@@ -1868,10 +1868,10 @@
     },
     {
      "name": "Montgomery County",
-     "n": 131,
-     "n_text": "131",
-     "lat": 39.245,
-     "lng": -77.313
+     "n": 134,
+     "n_text": "134",
+     "lat": 39.247,
+     "lng": -77.309
     },
     {
      "name": "Wicomico County",
@@ -1917,7 +1917,7 @@
    "total": 1352,
    "total_text": "1,352",
    "areas": 15,
-   "bar": 6,
+   "bar": 5.9,
    "share": 0.9,
    "busiest": [
     {
@@ -2050,8 +2050,8 @@
    "name": "Utah",
    "slug": "utah",
    "rank": 31,
-   "total": 1195,
-   "total_text": "1,195",
+   "total": 1197,
+   "total_text": "1,197",
    "areas": 37,
    "bar": 5.3,
    "share": 0.8,
@@ -2065,17 +2065,17 @@
     },
     {
      "name": "Utah County",
-     "n": 211,
-     "n_text": "211",
+     "n": 212,
+     "n_text": "212",
      "lat": 40.267,
      "lng": -111.712
     },
     {
      "name": "Weber County",
-     "n": 165,
-     "n_text": "165",
-     "lat": 41.204,
-     "lng": -111.967
+     "n": 166,
+     "n_text": "166",
+     "lat": 41.203,
+     "lng": -111.966
     },
     {
      "name": "Iron County",
@@ -2118,8 +2118,8 @@
    "name": "Iowa",
    "slug": "iowa",
    "rank": 32,
-   "total": 1140,
-   "total_text": "1,140",
+   "total": 1141,
+   "total_text": "1,141",
    "areas": 45,
    "bar": 5,
    "share": 0.7,
@@ -2175,8 +2175,8 @@
     },
     {
      "name": "Story County",
-     "n": 40,
-     "n_text": "40",
+     "n": 41,
+     "n_text": "41",
      "lat": 42.023,
      "lng": -93.639
     }
@@ -2186,17 +2186,17 @@
    "name": "New Mexico",
    "slug": "new-mexico",
    "rank": 33,
-   "total": 1104,
-   "total_text": "1,104",
+   "total": 1105,
+   "total_text": "1,105",
    "areas": 58,
    "bar": 4.9,
    "share": 0.7,
    "busiest": [
     {
      "name": "Bernalillo County",
-     "n": 457,
-     "n_text": "457",
-     "lat": 35.131,
+     "n": 458,
+     "n_text": "458",
+     "lat": 35.13,
      "lng": -106.618
     },
     {
@@ -2254,8 +2254,8 @@
    "name": "Connecticut",
    "slug": "connecticut",
    "rank": 34,
-   "total": 1081,
-   "total_text": "1,081",
+   "total": 1091,
+   "total_text": "1,091",
    "areas": 7,
    "bar": 4.8,
    "share": 0.7,
@@ -2269,15 +2269,15 @@
     },
     {
      "name": "Fairfield County",
-     "n": 268,
-     "n_text": "268",
+     "n": 276,
+     "n_text": "276",
      "lat": 41.213,
-     "lng": -73.261
+     "lng": -73.258
     },
     {
      "name": "New Haven County",
-     "n": 246,
-     "n_text": "246",
+     "n": 248,
+     "n_text": "248",
      "lat": 41.327,
      "lng": -72.873
     },
@@ -2301,23 +2301,23 @@
    "name": "Nevada",
    "slug": "nevada",
    "rank": 35,
-   "total": 1076,
-   "total_text": "1,076",
+   "total": 1081,
+   "total_text": "1,081",
    "areas": 22,
    "bar": 4.7,
    "share": 0.7,
    "busiest": [
     {
      "name": "Clark County",
-     "n": 720,
-     "n_text": "720",
+     "n": 724,
+     "n_text": "724",
      "lat": 36.146,
      "lng": -115.19
     },
     {
      "name": "Washoe County",
-     "n": 303,
-     "n_text": "303",
+     "n": 304,
+     "n_text": "304",
      "lat": 39.552,
      "lng": -119.802
     },
@@ -2437,16 +2437,16 @@
    "name": "North Dakota",
    "slug": "north-dakota",
    "rank": 37,
-   "total": 701,
-   "total_text": "701",
+   "total": 702,
+   "total_text": "702",
    "areas": 18,
    "bar": 3.1,
    "share": 0.4,
    "busiest": [
     {
      "name": "Stark County",
-     "n": 370,
-     "n_text": "370",
+     "n": 371,
+     "n_text": "371",
      "lat": 46.899,
      "lng": -102.791
     },
@@ -2761,8 +2761,8 @@
    "name": "West Virginia",
    "slug": "west-virginia",
    "rank": 43,
-   "total": 222,
-   "total_text": "222",
+   "total": 224,
+   "total_text": "224",
    "areas": 20,
    "bar": 1,
    "share": 0.1,
@@ -2817,11 +2817,11 @@
      "lng": -78.19
     },
     {
-     "name": "Randolph County",
+     "name": "Raleigh County",
      "n": 7,
      "n_text": "7",
-     "lat": 38.926,
-     "lng": -79.859
+     "lat": 37.801,
+     "lng": -81.172
     }
    ]
   },
